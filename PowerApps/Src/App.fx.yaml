@@ -1,0 +1,16 @@
+App As appinfo:
+    BackEnabled: =true
+    MinScreenHeight: =320
+    MinScreenWidth: =320
+    OnError: =
+    OnStart: =ClearCollect(DespachosAlmacenLocal,DespachosAlmacen); DespachosAlmacen;Gallery1; Gallery1.Selected.'Datos adjuntos'
+    StartScreen: =
+    Theme: =OrangeTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

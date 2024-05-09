@@ -1,0 +1,62 @@
+SetupScreen As screen:
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    HtmlText1 As htmlViewer:
+        Height: =1096
+        HoverBorderColor: =HtmlText1.BorderColor
+        HtmlText: |-
+            ="<!DOCTYPE html>
+            <html>
+            <body>
+            
+            
+            <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>
+            
+            <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+            
+            <p>Fecha: "&DataCardValue19.Text&"</p>
+            <p>Ciudad: "&Text(DataCardValue8.Selected.Value)&"</p>
+            <p>Clase: "&Text(DataCardValue13.Selected.Value)&"</p>
+            <hr>
+            
+            <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+            
+            <p>Nombre: "&DataCardValue11.Text&"</p>
+            <p>Cédula: "&DataCardValue12.Text&"</p>
+            <p>Vehículo: "&DataCardValue17.Text&"</p>
+            <hr>
+            
+            <h2 style='color:Tomato;'> ITEMS </h2>
+            
+            <ul>
+              <li>"&DataCardValue14.Text&"</li>
+            </ul>  
+            <hr>
+            
+            <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+            
+            <ul>
+              <li>"&DataCardValue15.Text&"</li>
+            </ul>  
+            <hr>
+            
+            <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+            
+            <img src=" & DataCardValue16.Image & " style= ' width:200px;heigth:200px'>
+            <hr>
+            
+            <h2 style='color:Tomato;'>IMAGEN</h2>
+            
+            <img src=" & VarImagePDF & " style= ' width:200px;heigth:200px'>
+            <hr>
+            
+            
+            </body>
+            </html>"
+        PressedBorderColor: =HtmlText1.BorderColor
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =1
+

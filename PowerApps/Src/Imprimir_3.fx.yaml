@@ -1,0 +1,983 @@
+"Imprimir_3 As screen.'printableLayout_A4Portrait_ver1.0'":
+    Height: =1123
+    ImagePosition: =ImagePosition.Fill
+    OnVisible: =Gallery1.Selected.'Datos adjuntos'
+    Width: =794
+
+    Container2_4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =139
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        Width: =794
+        Y: =713
+        ZIndex: =6
+
+        "Gallery2_2 As gallery.'BrowseLayout_Vertical_OneImageThreeColumnVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtrada"
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DelayItemLoading: =true
+            FillPortions: =0
+            Height: =300
+            Items: =Gallery1.Selected.'Datos adjuntos'
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =300
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =4
+            TemplateSize: =Min(208, Self.Height - 60)
+            Visible: =false
+            Width: =750
+            WrapCount: =3
+            ZIndex: =1
+
+            Image10_2 As image:
+                Height: =Parent.TemplateHeight
+                Image: =ThisItem.AbsoluteUri
+                ImagePosition: =ImagePosition.Fill
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =Parent.TemplateWidth
+                ZIndex: =1
+
+        FormViewer1_2 As formViewer:
+            AcceptsFocus: =false
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DataSource: =DespachosAlmacen
+            Height: =690
+            Item: =Gallery1.Selected
+            LayoutMinHeight: =200
+            LayoutMinWidth: =300
+            NumberOfColumns: =2
+            Visible: =false
+            Width: =650
+            ZIndex: =1
+
+            FechaDocumento_DataCard4_1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Fecha"
+                Default: =ThisItem.FechaDocumento
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,FechaDocumento)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =true
+                Width: =397
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey20_1 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue19_1 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey20_1.Y + DataCardKey20_1.Height + 5
+                    ZIndex: =2
+
+            Vehículo_DataCard2_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Title"
+                Default: =ThisItem.Título
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Título)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =54
+                Required: =false
+                Width: =397
+                X: =1
+                Y: =3
+                ZIndex: =1
+
+                DataCardKey18_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue17_2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey18_2.Y + DataCardKey18_2.Height + 5
+                    ZIndex: =2
+
+            Firma1_DataCard2_2 As typedDataCard.largeImageViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Firma1"
+                Default: =ThisItem.Firma1
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Firma1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =188
+                Required: =false
+                Width: =397
+                X: =1
+                Y: =4
+                ZIndex: =1
+
+                DataCardKey17_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue16_2 As image:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =131
+                    Image: =Parent.Default
+                    Width: =197
+                    X: =8
+                    Y: =DataCardKey17_2.Y + DataCardKey17_2.Height + 5
+                    ZIndex: =2
+
+            IdDespacho_DataCard1_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="IdDespacho"
+                Default: =ThisItem.IdDespacho
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,IdDespacho)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =58
+                Required: =false
+                Width: =397
+                X: =1
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey5_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue2_2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey5_2.Y + DataCardKey5_2.Height + 5
+                    ZIndex: =2
+
+            Clase_DataCard1_2 As typedDataCard.comboBoxViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Clase"
+                Default: =ThisItem.Clase
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Clase)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =78
+                Required: =false
+                Update: =DataCardValue13_2.Selected
+                Width: =397
+                X: =0
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey14_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue13_2 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    Height: =38
+                    Items: =Choices([@DespachosAlmacen].Clase)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices(DespachosAlmacen.Clase,DataCardValue13_2.SearchText)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =228
+                    X: =25
+                    Y: =39
+                    ZIndex: =2
+
+                ErrorMessage7_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue13_2.Y + DataCardValue13_2.Height
+                    ZIndex: =3
+
+                StarVisible4_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey14_2.Height
+                    PaddingBottom: =DataCardKey14_2.PaddingBottom
+                    PaddingLeft: =DataCardKey14_2.PaddingLeft
+                    PaddingRight: =DataCardKey14_2.PaddingRight
+                    PaddingTop: =DataCardKey14_2.PaddingTop
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey14_2.Y
+                    ZIndex: =4
+
+            Ciudad_DataCard1_2 As typedDataCard.comboBoxViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Ciudad"
+                Default: =ThisItem.Ciudad
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Ciudad)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =56
+                Required: =false
+                Update: =DataCardValue8_2.Selected
+                Width: =397
+                X: =1
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey9_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue8_2 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    Height: =29
+                    Items: =Choices([@DespachosAlmacen].Ciudad)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices(DespachosAlmacen.Ciudad,DataCardValue8_2.SearchText)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =176
+                    X: =29
+                    Y: =41
+                    ZIndex: =2
+
+                ErrorMessage5_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue8_2.Y + DataCardValue8_2.Height
+                    ZIndex: =3
+
+                StarVisible2_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey9_2.Height
+                    PaddingBottom: =DataCardKey9_2.PaddingBottom
+                    PaddingLeft: =DataCardKey9_2.PaddingLeft
+                    PaddingRight: =DataCardKey9_2.PaddingRight
+                    PaddingTop: =DataCardKey9_2.PaddingTop
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey9_2.Y
+                    ZIndex: =4
+
+            Item_DataCard1_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Equipo"
+                Default: =ThisItem.Item
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Item)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =52
+                Required: =true
+                Width: =397
+                X: =0
+                Y: =2
+                ZIndex: =2
+
+                DataCardKey15_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue14_2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey15_2.Y + DataCardKey15_2.Height + 5
+                    ZIndex: =2
+
+            PersonaqueRetira_DataCard2_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="PersonaqueRetira0"
+                Default: =ThisItem.'PersonaqueRetira (PersonaqueRetira0)'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,'PersonaqueRetira (PersonaqueRetira0)')
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =67
+                Required: =false
+                Width: =397
+                X: =1
+                Y: =2
+                ZIndex: =2
+
+                DataCardKey12_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue11_2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey12_2.Y + DataCardKey12_2.Height + 5
+                    ZIndex: =2
+
+            Cédula_DataCard2_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="PersonaqueRetira"
+                Default: =ThisItem.Cédula
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Cédula)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =56
+                Required: =true
+                Width: =397
+                X: =0
+                Y: =3
+                ZIndex: =2
+
+                DataCardKey13_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue12_2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey13_2.Y + DataCardKey13_2.Height + 5
+                    ZIndex: =2
+
+            Observaciones_DataCard1_2 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Observaciones"
+                Default: =ThisItem.Observaciones
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Observaciones)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =179
+                Required: =false
+                Width: =397
+                X: =0
+                Y: =4
+                ZIndex: =2
+
+                DataCardKey16_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    FontWeight: =FontWeight.Lighter
+                    Height: =48
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue15_2 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    FontWeight: =FontWeight.Bold
+                    Height: =57
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey16_2.Y + DataCardKey16_2.Height + 5
+                    ZIndex: =2
+
+        LblAppName2_1 As label:
+            Fill: =RGBA(58, 58, 58, 0)
+            Height: =88
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingLeft: =0
+            Size: =27
+            Text: ="Correo electrónico"
+            Width: =356
+            Wrap: =false
+            X: =32
+            ZIndex: =3
+
+    NewExpenseBackIcon_5 As icon.ChevronLeft:
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledFill: =NewExpenseBackIcon_5.Fill
+        FocusedBorderColor: =NewExpenseBackIcon_5.BorderColor
+        FocusedBorderThickness: =0
+        Height: =37
+        HoverBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, 20%)
+        HoverColor: =ColorFade(NewExpenseBackIcon_5.Color, 20%)
+        HoverFill: =NewExpenseBackIcon_5.Fill
+        Icon: =Icon.ChevronLeft
+        OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
+        PressedBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, -20%)
+        PressedColor: =ColorFade(NewExpenseBackIcon_5.Color, -20%)
+        PressedFill: =NewExpenseBackIcon_5.Fill
+        Width: =19
+        ZIndex: =9
+
+    Label4_5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =37
+        OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
+        Size: =15
+        Text: ="Atras"
+        Width: =68
+        X: =23
+        ZIndex: =10
+
+    Image13_2 As image:
+        Height: =81
+        Image: =Logo
+        Width: =703
+        X: =91
+        ZIndex: =11
+
+    Container2_3 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =37
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        Visible: =false
+        Width: =794
+        Y: =129
+        ZIndex: =15
+
+        Button1_1 As button:
+            AlignInContainer: =AlignInContainer.End
+            Fill: =RGBA(52, 152, 47, 1)
+            Height: =30
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |-
+                =Print();
+                Navigate(NewExpenseConfirm_1)
+            Size: =12
+            Text: ="Click Imprimir desde PC"
+            Tooltip: ="Click para Imprimir"
+            Width: =300
+            X: =17
+            Y: =58
+            ZIndex: =1
+
+        Button2_1 As button:
+            Fill: =RGBA(166, 215, 153, 1)
+            Height: =70
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |
+                =Set(VarImagePDF,JSON(Image5.Image,JSONFormat.IncludeBinaryData));
+                Set(
+                    varpdfdescargar,
+                    PDF(
+                        Container2_4,
+                        {
+                            ExpandContainers: true,
+                            Orientation: PaperOrientation.Landscape,
+                            Size: PaperSize.A4,
+                            DPI: 100,
+                            Margin: "10pt 10pt 10pt 10pt"
+                        }
+                    )
+                )
+            Size: =12
+            Text: ="Click Generar Solo datos en PDF"
+            Visible: =false
+            Width: =225
+            X: =4
+            Y: =40
+            ZIndex: =2
+
+        DataCardValue29_1 As attachments:
+            BorderColor: =
+            Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =
+            DropTargetTextColor: =RGBA(139, 154, 159, 1)
+            FillPortions: =1
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverColor: =RGBA(106, 122, 127, 1)
+            IsInDataCard: =true
+            Items: |+
+                ={
+                    name: "GestionAlmacen.pdf",
+                    valor: varpdfdescargar
+                }
+                
+            LayoutMinHeight: =520
+            LayoutMinWidth: =250
+            MaxAttachmentSize: =6
+            PaddingBottom: =5
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedFill: =RGBA(255, 0, 0, 1)
+            Size: =14
+            Tooltip: =
+            Visible: =false
+            Width: =301
+            X: =252
+            Y: =30
+            ZIndex: =3
+
+        Button3_1 As button:
+            Fill: =RGBA(15, 108, 189, 1)
+            Height: =30
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |+
+                =//Set(VarImagenpdf;JSON(Image10.Image;JSONFormat.IncludeBinaryData));;
+                Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
+                Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
+                
+                ClearCollect(VarimagenesAdjuntos, DataCardValue1.Attachments);
+                Set(EnvioCorreo, "<!DOCTYPE html>
+                <html>
+                <body>
+                
+                
+                <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>
+                
+                <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+                
+                <p>Fecha: "&DataCardValue19_1.Text&"</p>
+                <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
+                <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
+                <hr>
+                
+                <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+                
+                <p>Nombre: "&DataCardValue11_2.Text&"</p>
+                <p>Cédula: "&DataCardValue12_2.Text&"</p>
+                <p>Vehículo: "&DataCardValue17_2.Text&"</p>
+                <hr>
+                
+                <h2 style='color:Tomato;'> ITEMS </h2>
+                
+                <ul>
+                  <li>"&DataCardValue14_2.Text&"</li>
+                </ul>  
+                <hr>
+                
+                <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+                
+                <ul>
+                  <li>"&DataCardValue15_2.Text&"</li>
+                </ul>  
+                <hr>
+                
+                <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+                
+                <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
+                <hr>
+                
+                <h2 style='color:Tomato;'>IMAGEN</h2>
+                
+                <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
+                <hr>
+                
+                
+                </body>
+                </html>");
+                Office365Outlook.SendEmailV2(User().Email,"Documento de Almacén", EnvioCorreo,{Bcc:"analista.mantenimiento@partequipos.com"});
+                
+                ResetForm(Form2);Navigate(NewExpenseConfirm_3)
+                
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =12
+            Text: ="Click Enviar al correo de usuario"
+            Width: =300
+            ZIndex: =5
+
+    Label6_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(106, 122, 127, 1)
+        Height: =48
+        Size: =14
+        Text: ="Gestión Almacén"
+        Width: =794
+        Y: =81
+        ZIndex: =16
+
+    RectQuickActionBar2_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =71
+        Width: =Parent.Width
+        Y: =128
+        ZIndex: =17
+
+    LblAppName2_2 As label:
+        Fill: =RGBA(58, 58, 58, 0)
+        Height: =66
+        PaddingLeft: =0
+        Size: =14
+        Text: ="Enviar Correo electrónico"
+        Width: =356
+        Wrap: =false
+        X: =35
+        Y: =133
+        ZIndex: =18
+
+    LblRecipientCount2_1 As label:
+        PaddingLeft: =0
+        Size: =18
+        Text: =
+        Width: =
+        Wrap: =false
+        X: =52
+        Y: =271
+        ZIndex: =20
+
+    TextSearchBox2_1 As text:
+        AccessibleLabel: ="Busque personas o agregue direcciones de correo electrónico. Se necesita al menos un destinatario para un envío correcto."
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Height: =70
+        HintText: ="Agregar una dirección de correo electrónico"
+        PaddingLeft: =70
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =14
+        Width: =458
+        X: =35
+        Y: =317
+        ZIndex: =21
+
+    LblEmailSubject2_1 As label:
+        Height: =44
+        PaddingLeft: =0
+        Size: =18
+        Text: ="*Asunto"
+        Width: =445
+        Wrap: =false
+        X: =35
+        Y: =411
+        ZIndex: =22
+
+    TextEmailSubject2_1 As text:
+        AccessibleLabel: ="Se requiere un asunto para enviar un correo electrónico."
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Height: =50
+        HintText: ="Agregar un asunto"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        TabIndex: =
+        Width: =458
+        X: =35
+        Y: =469
+        ZIndex: =23
+
+    LblEmailMessage2_1 As label:
+        Height: =36
+        PaddingLeft: =0
+        Size: =18
+        Text: ="Mensaje"
+        Width: =445
+        Wrap: =false
+        X: =35
+        Y: =555
+        ZIndex: =24
+
+    TextEmailMessage2_1 As text:
+        AccessibleLabel: ="Agregar un mensaje"
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Height: =317
+        HintText: ="Agregar un mensaje"
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        TabIndex: =
+        Width: =458
+        X: =35
+        Y: =613
+        ZIndex: =25
+
+    Button5 As button:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =65
+        OnSelect: |-
+            =/*Create semicolon separated list of people to email, send the email, reset subject & message fields*/           
+            Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
+            Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
+            
+            Set(EnvioCorreo, "<!DOCTYPE html>
+            <html>
+            <body>
+            
+            
+            <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACÉN PARTEQUIPOS</h1>
+            
+            <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+            
+            <p>Fecha: "&DataCardValue19_1.Text&"</p>
+            <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
+            <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
+            <hr>
+            
+            <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+            
+            <p>Nombre: "&DataCardValue11_2.Text&"</p>
+            <p>Cédula: "&DataCardValue12_2.Text&"</p>
+            <p>Vehículo: "&DataCardValue17_2.Text&"</p>
+            <hr>
+            
+            <h2 style='color:Tomato;'> ITEMS </h2>
+            
+            <ul>
+              <li>"&DataCardValue14_2.Text&"</li>
+            </ul>  
+            <hr>
+            
+            <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+            
+            <ul>
+              <li>"&DataCardValue15_2.Text&"</li>
+            </ul>  
+            <hr>
+            
+            <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+            
+            <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
+            <hr>
+            
+            <h2 style='color:Tomato;'>IMAGEN</h2>
+            
+            <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
+            <hr>
+            
+            
+            </body>
+            </html>");
+            
+                      
+            Office365Outlook.SendEmailV2(TextSearchBox2_1.Text, TextEmailSubject2_1.Text ,EnvioCorreo, {Importance:"Normal"});Reset(TextSearchBox2_1);   
+            Reset(TextEmailSubject2_1);           
+            Reset(TextEmailMessage2_1);          
+            
+            
+            ResetForm(Form2);Navigate(NewExpenseConfirm_3)
+        Size: =14
+        Text: ="Enviar"
+        Width: =166
+        X: =314
+        Y: =209
+        ZIndex: =27
+
+    LblEmailSubject2_2 As label:
+        Height: =34
+        PaddingLeft: =0
+        Size: =18
+        Text: ="*Correo"
+        Width: =445
+        Wrap: =false
+        X: =35
+        Y: =277
+        ZIndex: =28
+

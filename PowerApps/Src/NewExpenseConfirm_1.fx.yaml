@@ -1,0 +1,96 @@
+NewExpenseConfirm_1 As screen:
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    NewExpenseConfirmTitleLabel_1 As label:
+        Align: =Align.Center
+        FocusedBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+        Height: =192
+        HoverBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+        HoverColor: =NewExpenseConfirmTitleLabel_1.Color
+        HoverFill: =NewExpenseConfirmTitleLabel_1.Fill
+        PressedBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+        PressedColor: =NewExpenseConfirmTitleLabel_1.Color
+        PressedFill: =NewExpenseConfirmTitleLabel_1.Fill
+        Size: =26
+        Text: |-
+            ="Su Impresión se ha realizado
+            con éxito"
+        Width: =364
+        X: =137
+        Y: =544
+        ZIndex: =2
+
+    NewExpenseConfirmTimer_1 As timer:
+        AutoStart: =true
+        BorderColor: =ColorFade(NewExpenseConfirmTimer_1.Fill, -15%)
+        DisabledBorderColor: =ColorFade(NewExpenseConfirmTimer_1.BorderColor, 70%)
+        DisabledColor: =ColorFade(NewExpenseConfirmTimer_1.Fill, 90%)
+        DisabledFill: =ColorFade(NewExpenseConfirmTimer_1.Fill, 70%)
+        Duration: =2000
+        FocusedBorderColor: =NewExpenseConfirmTimer_1.BorderColor
+        Height: =70
+        HoverBorderColor: =ColorFade(NewExpenseConfirmTimer_1.BorderColor, 20%)
+        HoverColor: =NewExpenseConfirmTimer_1.Color
+        HoverFill: =ColorFade(NewExpenseConfirmTimer_1.Fill, 20%)
+        OnTimerEnd: =Navigate('My Expenses',ScreenTransition.None)
+        PressedBorderColor: =NewExpenseConfirmTimer_1.Fill
+        PressedColor: =NewExpenseConfirmTimer_1.Fill
+        PressedFill: =NewExpenseConfirmTimer_1.Color
+        Text: |-
+            =Text(Time(0, 0, NewExpenseConfirmTimer_1.Value/1000), "hh:mm:ss")
+        Visible: =false
+        Width: =280
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+    NewExpenseConfirmBackground_1 As rectangle:
+        DisabledFill: =NewExpenseConfirmBackground_1.Fill
+        Fill: =RGBA(62, 96, 170, 0)
+        FocusedBorderColor: =NewExpenseConfirmBackground_1.BorderColor
+        Height: =1136
+        HoverFill: =NewExpenseConfirmBackground_1.Fill
+        OnSelect: =Navigate('My Expenses',ScreenTransition.None)
+        PressedFill: =NewExpenseConfirmBackground_1.Fill
+        Width: =640
+        ZIndex: =4
+
+    NewExpenseConfirmGroup_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        NewExpenseConfirmCycle_1 As circle:
+            BorderColor: =RGBA(0, 217, 86, 1)
+            BorderThickness: =4
+            DisabledFill: =NewExpenseConfirmCycle_1.Fill
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =NewExpenseConfirmCycle_1.BorderColor
+            FocusedBorderThickness: =0
+            Height: =122
+            HoverFill: =NewExpenseConfirmCycle_1.Fill
+            PressedFill: =NewExpenseConfirmCycle_1.Fill
+            Width: =122
+            X: =259
+            Y: =365
+            ZIndex: =5
+
+        NewExpenseConfirmIcon_1 As icon.Check:
+            Color: =RGBA(0, 217, 86, 1)
+            DisabledFill: =NewExpenseConfirmIcon_1.Fill
+            FocusedBorderColor: =NewExpenseConfirmIcon_1.BorderColor
+            FocusedBorderThickness: =0
+            HoverBorderColor: =ColorFade(NewExpenseConfirmIcon_1.BorderColor, 20%)
+            HoverColor: =ColorFade(NewExpenseConfirmIcon_1.Color, 20%)
+            HoverFill: =NewExpenseConfirmIcon_1.Fill
+            Icon: =Icon.Check
+            PressedBorderColor: =ColorFade(NewExpenseConfirmIcon_1.BorderColor, -20%)
+            PressedColor: =ColorFade(NewExpenseConfirmIcon_1.Color, -20%)
+            PressedFill: =NewExpenseConfirmIcon_1.Fill
+            X: =280
+            Y: =387
+            ZIndex: =6
+

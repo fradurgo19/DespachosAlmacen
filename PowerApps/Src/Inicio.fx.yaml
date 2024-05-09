@@ -1,0 +1,52 @@
+Inicio As screen:
+    Fill: =RGBA(9, 33, 98, 1)
+
+    Image6 As image:
+        BorderColor: =RGBA(79, 29, 26, 1)
+        Fill: =RGBA(79, 29, 26, 1)
+        Height: =1136
+        Image: =giphy
+        ImagePosition: =ImagePosition.Fill
+        Visible: =varCargar
+        Width: =639
+        ZIndex: =1
+
+    ButtonCanvas3 As Botón:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+        Text: ="Ingresar"
+        Width: =208
+        X: =224
+        Y: =863
+        ZIndex: =2
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =76
+        Size: =30
+        Text: ="Bienvenido a la App"
+        Width: =640
+        Y: =194
+        ZIndex: =3
+
+    Image7 As image:
+        Height: =109
+        Image: =Logo_1
+        Width: =640
+        ZIndex: =4
+
+    Timer1 As timer:
+        AutoStart: =varTiempo
+        Duration: =7000
+        Height: =70
+        OnTimerEnd: =Set(varCargar,false);Navigate('My Expenses',ScreenTransition.Fade)
+        Visible: =false
+        Width: =280
+        X: =192
+        Y: =966
+        ZIndex: =5
+
