@@ -68,7 +68,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Botón",
-    "Version": "0.0.29"
+    "Version": "0.0.41"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -152,7 +152,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "form",
     "OverridableProperties": {},
-    "Version": "2.4.1"
+    "Version": "2.4.2"
   },
   "formViewer": {
     "CustomGroupControlTemplateName": "",
@@ -166,7 +166,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "formViewer",
     "OverridableProperties": {},
-    "Version": "2.3.2"
+    "Version": "2.3.4"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -392,7 +392,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Texto",
-    "Version": "0.0.25"
+    "Version": "0.0.37"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

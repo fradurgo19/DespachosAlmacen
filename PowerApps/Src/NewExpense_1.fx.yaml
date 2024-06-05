@@ -1038,13 +1038,19 @@
         ZIndex: =10
 
     AdjuntarControl As Botón:
+        Align: =""
         BasePaletteColor: =RGBA(189, 49, 51, 1)
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =65
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: |-
             =AdjuntarDocumento.Run({name:First(AdjuntarControl1.Attachments).Name,contentBytes:First(AdjuntarControl1.Attachments).Value},First(AdjuntarControl1.Attachments).Value)
         Text: ="Adjuntar a Biblioteca"
+        VerticalAlign: =""
         Visible: =false
         Width: =154
         X: =437
@@ -1150,11 +1156,16 @@
         ZIndex: =14
 
     ButtonCanvas2 As Botón:
+        Align: =""
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =RGBA(54, 176, 75, 1)
         DisplayMode: =DisplayMode.Edit
         FontColor: =RGBA(255, 255, 255, 1)
         Height: =86
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: |-
             =Set(VarFirma,JSON(Image3.Image,JSONFormat.IncludeBinaryData))&
             Set(VarImagenes,JSON(UploadedImage1.Image,JSONFormat.IncludeBinaryData));
@@ -1212,6 +1223,7 @@
             SubmitForm(Form2)
              
         Text: ="Agregar"
+        VerticalAlign: =""
         Visible: =true
         Width: =120
         X: =419
@@ -1219,12 +1231,18 @@
         ZIndex: =15
 
     ButtonCanvas1 As Botón:
+        Align: =""
         BasePaletteColor: =RGBA(71, 158, 245, 1)
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =86
+        Icon: =""
+        IconRotation: =0
+        IconStyle: ="Outline"
+        Layout: ="Icon before"
         OnSelect: =NewForm(Form2)
         Text: ="Nuevo"
+        VerticalAlign: =""
         Width: =120
         X: =187
         Y: =1050
