@@ -32,16 +32,6 @@ Accede fácilmente al historial completo de despachos para una gestión efectiva
 
 ![Historial de Despachos](ruta/a/tu/imagen_historial_despachos.png) <!-- Reemplaza "ruta/a/tu/imagen_historial_despachos.png" con la URL de la imagen -->
 
-### Cómo Funciona
-
-Aquí puedes explicar cómo funciona cada módulo de la aplicación. Detalla los pasos para usar las principales características, los beneficios que aporta cada sección y cualquier consejo útil para los usuarios.
-
-### Imágenes del Aplicativo
-
-Agrega imágenes del aplicativo para mostrar cómo se ve la interfaz y las funcionalidades principales. Esto ayudará a los usuarios a familiarizarse con la app antes de usarla.
-
-![Captura de Pantalla 1](ruta/a/tu/imagen_captura_pantalla_1.png) <!-- Reemplaza "ruta/a/tu/imagen_captura_pantalla_1.png" con la URL de la imagen -->
-![Captura de Pantalla 2](ruta/a/tu/imagen_captura_pantalla_2.png) <!-- Reemplaza "ruta/a/tu/imagen_captura_pantalla_2.png" con la URL de la imagen -->
 
 ---
 
