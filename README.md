@@ -48,7 +48,7 @@ I am particularly passionate about Data Science and continuously seek to expand 
 
 ### Technical Skills
 
-<img src="https://img.shields.io/badge/-Power%20Apps-2F6C8F?style=flat&logo=powerapps&logoColor=white"> <br />
+<img src="https://img.shields.io/badge/-Power%20Apps-2F6C8F?style=flat&logo=powerapps&logoColor=white"> <img src="https://img.shields.io/badge/-Power%20Automate-0078D4?style=flat&logo=powerautomate&logoColor=white">
 <img src="https://img.shields.io/badge/-Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black"> <br />
 <img src="https://img.shields.io/badge/-Python%203-black?style=flat&logo=python&logoColor=white"> <br />
 <img src="https://img.shields.io/badge/-VBA-8A2C2A?style=flat&logo=visualstudiocode&logoColor=white"> <br />
@@ -64,4 +64,3 @@ I am particularly passionate about Data Science and continuously seek to expand 
 |📞 *+57 313-386-7136*|✉️ *fradurgo19@gmail.com \|✉️ franka.durang@ecci.edu.co*| <a href="https://www.linkedin.com/in/frank-anderson-duran-gonzalez/"><img src="https://i.ibb.co/Kx2GSrT/linkedin.png" width="32px" height="32px"></a> &nbsp; | <a href="https://github.com/fradurgo19"><img src="https://cdn.iconscout.com/icon/free/png-256/github-108-438008.png" width="32px" height="32px"></a> &nbsp; &nbsp;|
 
 ⭐️ From [fradurgo19](https://github.com/fradurgo19)
-
