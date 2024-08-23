@@ -6,7 +6,7 @@ Optimiza y simplifica la gestión de despachos desde los almacenes con nuestra a
 
 Registra cada despacho con información completa sobre el remitente y el destinatario. Captura datos precisos sobre el estado actual de cada ítem despachado.
 
-![Registro Detallado](ruta/a/tu/imagen_registro_detallado.png) <!-- Reemplaza "ruta/a/tu/imagen_registro_detallado.png" con la URL de la imagen -->
+![Registro Detallado](PowerApps/Assets/Images/Captura de pantalla 2024-08-23 141304.png) <!-- Reemplaza "ruta/a/tu/imagen_registro_detallado.png" con la URL de la imagen -->
 
 ## 📸 Evidencia Visual
 
