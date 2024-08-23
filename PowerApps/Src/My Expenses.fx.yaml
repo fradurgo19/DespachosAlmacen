@@ -492,6 +492,7 @@
         ZIndex: =20
 
     TextCanvas1_3 As Texto:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =Color.Black
         Height: =60
@@ -528,6 +529,7 @@
         ZIndex: =25
 
     TextCanvas1_4 As Texto:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =Color.Black
         Height: =61
@@ -600,6 +602,7 @@
         ZIndex: =32
 
     TextCanvas1_6 As Texto:
+        BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =Color.Black
         Height: =68
