@@ -3,7 +3,11 @@
     Fill: =RGBA(255, 255, 255, 1)
     Height: =Max(App.Height, App.DesignHeight)
     ImagePosition: =ImagePosition.Center
-    OnVisible: =ClearCollect(DespachosAlmacenLocal,DespachosAlmacen); DespachosAlmacen;Gallery1; Gallery1.Selected.'Datos adjuntos'
+    OnVisible: |-
+        =ClearCollect(DespachosAlmacenLocal,DespachosAlmacen); 
+        DespachosAlmacen;
+        Gallery1; 
+        Gallery1.Selected.'Datos adjuntos'
     Width: =Max(App.Width, App.DesignWidth)
 
     GrayLine As rectangle:
