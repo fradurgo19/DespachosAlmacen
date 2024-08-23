@@ -18,13 +18,13 @@ Adjunta evidencia visual del estado de los productos mediante la captura de foto
 
 Facilita la confirmación y recepción del despacho mediante una firma electrónica. Garantiza la satisfacción del destinatario y registra la aceptación formal del envío.
 
-![Firma Electrónica](ruta/a/tu/imagen_firma_electronica.png) <!-- Reemplaza "ruta/a/tu/imagen_firma_electronica.png" con la URL de la imagen -->
+![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141420.png)
 
 ## 📄 Generación de Documentos
 
 Genera documentos PDF detallados de cada despacho para su fácil almacenamiento y referencia. Simplifica la creación de informes y garantiza una documentación organizada.
 
-![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141343.png)
+
 
 ## 🕒 Historial de Despachos
 
