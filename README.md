@@ -9,6 +9,7 @@ Registra cada despacho con información completa sobre el remitente y el destina
 <img src="PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141304.png" width="70%" />
 
 
+
 ## 📸 Evidencia Visual
 
 Adjunta evidencia visual del estado de los productos mediante la captura de fotografías en tiempo real. Proporciona una visión instantánea y verificable del estado de los artículos despachados.
