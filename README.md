@@ -6,13 +6,13 @@ Optimiza y simplifica la gestión de despachos desde los almacenes con nuestra a
 
 Registra cada despacho con información completa sobre el remitente y el destinatario. Captura datos precisos sobre el estado actual de cada ítem despachado.
 
-![Registro Detallado](PowerApps/Assets/Images/Captura de pantalla 2024-08-23 141304.png) <!-- Reemplaza "ruta/a/tu/imagen_registro_detallado.png" con la URL de la imagen -->
+![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141304.png)
 
 ## 📸 Evidencia Visual
 
 Adjunta evidencia visual del estado de los productos mediante la captura de fotografías en tiempo real. Proporciona una visión instantánea y verificable del estado de los artículos despachados.
 
-![Evidencia Visual](ruta/a/tu/imagen_evidencia_visual.png) <!-- Reemplaza "ruta/a/tu/imagen_evidencia_visual.png" con la URL de la imagen -->
+![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141420.png)
 
 ## ✍️ Firma Electrónica
 
@@ -24,7 +24,7 @@ Facilita la confirmación y recepción del despacho mediante una firma electrón
 
 Genera documentos PDF detallados de cada despacho para su fácil almacenamiento y referencia. Simplifica la creación de informes y garantiza una documentación organizada.
 
-![Generación de Documentos](ruta/a/tu/imagen_generacion_documentos.png) <!-- Reemplaza "ruta/a/tu/imagen_generacion_documentos.png" con la URL de la imagen -->
+![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141343.png)
 
 ## 🕒 Historial de Despachos
 
