@@ -57,7 +57,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =14
-            Text: =ThisItem.'Id. de activo de cumplimiento normativo'
+            Text: =ThisItem.FechaDocumento
             VerticalAlign: =VerticalAlign.Top
             Width: =142
             X: =10
