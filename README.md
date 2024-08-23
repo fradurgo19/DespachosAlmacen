@@ -24,13 +24,12 @@ Facilita la confirmación y recepción del despacho mediante una firma electrón
 
 Genera documentos PDF detallados de cada despacho para su fácil almacenamiento y referencia. Simplifica la creación de informes y garantiza una documentación organizada.
 
-
+![Captura de Pantalla](PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141325.png)
 
 ## 🕒 Historial de Despachos
 
 Accede fácilmente al historial completo de despachos para una gestión efectiva y seguimiento detallado.
 
-![Historial de Despachos](ruta/a/tu/imagen_historial_despachos.png) <!-- Reemplaza "ruta/a/tu/imagen_historial_despachos.png" con la URL de la imagen -->
 
 
 ---
