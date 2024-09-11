@@ -213,6 +213,7 @@
                     DisplayMode: =Parent.DisplayMode
                     Height: =55
                     HoverFill: =Color.BlanchedAlmond
+                    InputTextPlaceholder: ="Ciudad"
                     Items: =Choices([@DespachosAlmacen].Ciudad)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     PressedFill: =RGBA(189, 49, 51, 1)
@@ -295,6 +296,7 @@
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
                     Height: =68
+                    InputTextPlaceholder: ="Clase"
                     Items: =Choices([@DespachosAlmacen].Clase)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
