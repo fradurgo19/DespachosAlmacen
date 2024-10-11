@@ -1,59 +1,81 @@
 Inicio As screen:
     Fill: =RGBA(9, 33, 98, 1)
 
-    Image6 As image:
-        BorderColor: =RGBA(79, 29, 26, 1)
-        Fill: =RGBA(79, 29, 26, 1)
+    Container3 As groupContainer.manualLayoutContainer:
         Height: =1136
-        Image: =giphy
-        ImagePosition: =ImagePosition.Fill
-        Visible: =varCargar
         Width: =639
-        ZIndex: =1
+        ZIndex: =6
 
-    ButtonCanvas3 As Botón:
-        Align: =""
-        BasePaletteColor: =RGBA(249, 83, 109, 1)
-        BorderStyle: =""
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =80
-        Icon: =""
-        IconRotation: =0
-        IconStyle: ="Outline"
-        Layout: ="Icon before"
-        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
-        Text: ="Ingresar"
-        VerticalAlign: =""
-        Width: =208
-        X: =224
-        Y: =863
-        ZIndex: =2
+        Container4 As groupContainer.manualLayoutContainer:
+            Height: =85
+            Width: =639
+            ZIndex: =1
 
-    Label1 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =76
-        Size: =30
-        Text: ="Bienvenido a la App"
-        Width: =640
-        Y: =194
-        ZIndex: =3
+            Image7 As image:
+                Height: =85
+                Image: =Logo_1
+                Width: =633
+                ZIndex: =1
 
-    Image7 As image:
-        Height: =109
-        Image: =Logo_1
-        Width: =640
-        ZIndex: =4
+        Container5 As groupContainer.manualLayoutContainer:
+            Height: =127
+            Width: =639
+            Y: =85
+            ZIndex: =2
 
-    Timer1 As timer:
-        AutoStart: =varTiempo
-        Duration: =7000
-        Height: =70
-        OnTimerEnd: =Set(varCargar,false);Navigate('My Expenses',ScreenTransition.Fade)
-        Visible: =false
-        Width: =280
-        X: =192
-        Y: =966
-        ZIndex: =5
+            Label1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =113
+                Size: =30
+                Text: ="Bienvenido a la App"
+                Width: =635
+                Y: =4
+                ZIndex: =1
+
+        Container6 As groupContainer.manualLayoutContainer:
+            Height: =88
+            Width: =639
+            Y: =1047
+            ZIndex: =4
+
+            ButtonCanvas3 As Botón:
+                Align: =""
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =80
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                Text: ="Ingresar"
+                VerticalAlign: =""
+                Width: =208
+                X: =208
+                Y: =4
+                ZIndex: =1
+
+        Timer1 As timer:
+            AutoStart: =varTiempo
+            Duration: =7000
+            Height: =70
+            OnTimerEnd: =Set(varCargar,false);Navigate('My Expenses',ScreenTransition.Fade)
+            Visible: =false
+            Width: =280
+            X: =192
+            Y: =804
+            ZIndex: =5
+
+        Image6 As image:
+            BorderColor: =RGBA(79, 29, 26, 1)
+            Fill: =RGBA(79, 29, 26, 1)
+            Height: =1136
+            Image: =giphy
+            ImagePosition: =ImagePosition.Fill
+            Visible: =varCargar
+            Width: =639
+            ZIndex: =6
 
