@@ -5,13 +5,13 @@
     Width: =794
 
     Container2_4 As groupContainer.verticalAutoLayoutContainer:
-        Height: =139
+        Height: =62
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         LayoutWrap: =true
         Width: =794
-        Y: =713
+        Y: =789
         ZIndex: =6
 
         "Gallery2_2 As gallery.'BrowseLayout_Vertical_OneImageThreeColumnVariant_ver5.0'":
@@ -590,394 +590,421 @@
             X: =32
             ZIndex: =3
 
-    NewExpenseBackIcon_5 As icon.ChevronLeft:
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledFill: =NewExpenseBackIcon_5.Fill
-        FocusedBorderColor: =NewExpenseBackIcon_5.BorderColor
-        FocusedBorderThickness: =0
-        Height: =37
-        HoverBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, 20%)
-        HoverColor: =ColorFade(NewExpenseBackIcon_5.Color, 20%)
-        HoverFill: =NewExpenseBackIcon_5.Fill
-        Icon: =Icon.ChevronLeft
-        OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
-        PressedBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, -20%)
-        PressedColor: =ColorFade(NewExpenseBackIcon_5.Color, -20%)
-        PressedFill: =NewExpenseBackIcon_5.Fill
-        Width: =19
-        ZIndex: =9
-
-    Label4_5 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(0, 0, 0, 1)
-        Height: =37
-        OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
-        Size: =15
-        Text: ="Atras"
-        Width: =68
-        X: =23
-        ZIndex: =10
-
-    Image13_2 As image:
-        Height: =81
-        Image: =Logo
-        Width: =703
-        X: =91
-        ZIndex: =11
-
-    Container2_3 As groupContainer.horizontalAutoLayoutContainer:
-        Height: =37
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        LayoutWrap: =true
-        Visible: =false
+    Container35 As groupContainer.manualLayoutContainer:
+        Height: =1122
         Width: =794
-        Y: =129
-        ZIndex: =15
+        ZIndex: =29
 
-        Button1_1 As button:
-            AlignInContainer: =AlignInContainer.End
-            Fill: =RGBA(52, 152, 47, 1)
-            Height: =30
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |-
-                =Print();
-                Navigate(NewExpenseConfirm_1)
-            Size: =12
-            Text: ="Click Imprimir desde PC"
-            Tooltip: ="Click para Imprimir"
-            Width: =300
-            X: =17
-            Y: =58
+        Container36 As groupContainer.manualLayoutContainer:
+            Height: =99
+            Width: =794
             ZIndex: =1
 
-        Button2_1 As button:
-            Fill: =RGBA(166, 215, 153, 1)
-            Height: =70
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |
-                =Set(VarImagePDF,JSON(Image5.Image,JSONFormat.IncludeBinaryData));
-                Set(
-                    varpdfdescargar,
-                    PDF(
-                        Container2_4,
-                        {
-                            ExpandContainers: true,
-                            Orientation: PaperOrientation.Landscape,
-                            Size: PaperSize.A4,
-                            DPI: 100,
-                            Margin: "10pt 10pt 10pt 10pt"
-                        }
-                    )
-                )
-            Size: =12
-            Text: ="Click Generar Solo datos en PDF"
-            Visible: =false
-            Width: =225
-            X: =4
-            Y: =40
+            NewExpenseBackIcon_5 As icon.ChevronLeft:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledFill: =NewExpenseBackIcon_5.Fill
+                FocusedBorderColor: =NewExpenseBackIcon_5.BorderColor
+                FocusedBorderThickness: =0
+                Height: =37
+                HoverBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, 20%)
+                HoverColor: =ColorFade(NewExpenseBackIcon_5.Color, 20%)
+                HoverFill: =NewExpenseBackIcon_5.Fill
+                Icon: =Icon.ChevronLeft
+                OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
+                PressedBorderColor: =ColorFade(NewExpenseBackIcon_5.BorderColor, -20%)
+                PressedColor: =ColorFade(NewExpenseBackIcon_5.Color, -20%)
+                PressedFill: =NewExpenseBackIcon_5.Fill
+                Width: =19
+                Y: =18
+                ZIndex: =1
+
+            Label4_5 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =37
+                OnSelect: =ResetForm(Form2);Navigate(NewExpenseConfirm_2)
+                Size: =15
+                Text: ="Atras"
+                Width: =68
+                X: =23
+                Y: =18
+                ZIndex: =2
+
+            Image13_2 As image:
+                Height: =81
+                Image: =Logo
+                Width: =703
+                X: =91
+                Y: =18
+                ZIndex: =3
+
+        Container37 As groupContainer.manualLayoutContainer:
+            Height: =59
+            Width: =794
+            Y: =99
             ZIndex: =2
 
-        DataCardValue29_1 As attachments:
-            BorderColor: =
-            Color: =RGBA(255, 255, 255, 1)
-            DisplayMode: =
-            DropTargetTextColor: =RGBA(139, 154, 159, 1)
-            FillPortions: =1
-            FontWeight: =FontWeight.Bold
-            Height: =70
-            HoverColor: =RGBA(106, 122, 127, 1)
-            IsInDataCard: =true
-            Items: |+
-                ={
-                    name: "GestionAlmacen.pdf",
-                    valor: varpdfdescargar
-                }
-                
-            LayoutMinHeight: =520
-            LayoutMinWidth: =250
-            MaxAttachmentSize: =6
-            PaddingBottom: =5
-            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-            PaddingRight: =5
-            PaddingTop: =5
-            PressedFill: =RGBA(255, 0, 0, 1)
-            Size: =14
-            Tooltip: =
-            Visible: =false
-            Width: =301
-            X: =252
-            Y: =30
+            Label6_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(106, 122, 127, 1)
+                Height: =48
+                Size: =14
+                Text: ="Gestión Almacén"
+                Width: =794
+                Y: =9
+                ZIndex: =1
+
+        Container38 As groupContainer.manualLayoutContainer:
+            Height: =86
+            Width: =794
+            Y: =158
             ZIndex: =3
 
-        Button3_1 As button:
-            Fill: =RGBA(15, 108, 189, 1)
-            Height: =30
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |+
-                =//Set(VarImagenpdf;JSON(Image10.Image;JSONFormat.IncludeBinaryData));;
-                Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
-                Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
-                
-                ClearCollect(VarimagenesAdjuntos, DataCardValue1.Attachments);
-                Set(EnvioCorreo, "<!DOCTYPE html>
-                <html>
-                <body>
-                
-                
-                <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>
-                
-                <h2 style='color:Tomato;'> DATOS GENERALES </h2>
-                
-                <p>Fecha: "&DataCardValue19_1.Text&"</p>
-                <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
-                <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
-                <hr>
-                
-                <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
-                
-                <p>Nombre: "&DataCardValue11_2.Text&"</p>
-                <p>Cédula: "&DataCardValue12_2.Text&"</p>
-                <p>Vehículo: "&DataCardValue17_2.Text&"</p>
-                <hr>
-                
-                <h2 style='color:Tomato;'> ITEMS </h2>
-                
-                <ul>
-                  <li>"&DataCardValue14_2.Text&"</li>
-                </ul>  
-                <hr>
-                
-                <h2 style='color:Tomato;'> OBSERVACIONES </h2>
-                
-                <ul>
-                  <li>"&DataCardValue15_2.Text&"</li>
-                </ul>  
-                <hr>
-                
-                <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
-                
-                <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
-                <hr>
-                
-                <h2 style='color:Tomato;'>IMAGEN</h2>
-                
-                <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
-                <hr>
-                
-                
-                </body>
-                </html>");
-                Office365Outlook.SendEmailV2(User().Email,"Documento de Almacén", EnvioCorreo,{Bcc:"analista.mantenimiento@partequipos.com"});
-                
-                ResetForm(Form2);Navigate(NewExpenseConfirm_3)
-                
-            RadiusBottomLeft: =9
-            RadiusBottomRight: =9
-            RadiusTopLeft: =9
-            RadiusTopRight: =9
-            Size: =12
-            Text: ="Click Enviar al correo de usuario"
-            Width: =300
-            ZIndex: =5
+            Container2_3 As groupContainer.horizontalAutoLayoutContainer:
+                Height: =37
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                Visible: =false
+                Width: =794
+                Y: =5
+                ZIndex: =1
 
-    Label6_2 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(106, 122, 127, 1)
-        Height: =48
-        Size: =14
-        Text: ="Gestión Almacén"
-        Width: =794
-        Y: =81
-        ZIndex: =16
+                Button1_1 As button:
+                    AlignInContainer: =AlignInContainer.End
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(52, 152, 47, 1)
+                    Height: =30
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Print();
+                        Navigate(NewExpenseConfirm_1)
+                    Size: =12
+                    Text: ="Click Imprimir desde PC"
+                    Tooltip: ="Click para Imprimir"
+                    Width: =300
+                    X: =17
+                    Y: =58
+                    ZIndex: =1
 
-    RectQuickActionBar2_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 1)
-        Height: =71
-        Width: =Parent.Width
-        Y: =128
-        ZIndex: =17
+                Button2_1 As button:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(166, 215, 153, 1)
+                    Height: =70
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |
+                        =Set(VarImagePDF,JSON(Image5.Image,JSONFormat.IncludeBinaryData));
+                        Set(
+                            varpdfdescargar,
+                            PDF(
+                                Container2_4,
+                                {
+                                    ExpandContainers: true,
+                                    Orientation: PaperOrientation.Landscape,
+                                    Size: PaperSize.A4,
+                                    DPI: 100,
+                                    Margin: "10pt 10pt 10pt 10pt"
+                                }
+                            )
+                        )
+                    Size: =12
+                    Text: ="Click Generar Solo datos en PDF"
+                    Visible: =false
+                    Width: =225
+                    X: =4
+                    Y: =40
+                    ZIndex: =2
 
-    LblAppName2_2 As label:
-        Fill: =RGBA(58, 58, 58, 0)
-        Height: =66
-        PaddingLeft: =0
-        Size: =14
-        Text: ="Enviar Correo electrónico"
-        Width: =356
-        Wrap: =false
-        X: =35
-        Y: =133
-        ZIndex: =18
+                DataCardValue29_1 As attachments:
+                    BorderColor: =
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =
+                    DropTargetTextColor: =RGBA(139, 154, 159, 1)
+                    FillPortions: =1
+                    FontWeight: =FontWeight.Bold
+                    Height: =70
+                    HoverColor: =RGBA(106, 122, 127, 1)
+                    IsInDataCard: =true
+                    Items: |+
+                        ={
+                            name: "GestionAlmacen.pdf",
+                            valor: varpdfdescargar
+                        }
+                        
+                    LayoutMinHeight: =520
+                    LayoutMinWidth: =250
+                    MaxAttachmentSize: =6
+                    PaddingBottom: =5
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedFill: =RGBA(255, 0, 0, 1)
+                    Size: =14
+                    Tooltip: =
+                    Visible: =false
+                    Width: =301
+                    X: =252
+                    Y: =30
+                    ZIndex: =3
 
-    LblRecipientCount2_1 As label:
-        PaddingLeft: =0
-        Size: =18
-        Text: =
-        Width: =
-        Wrap: =false
-        X: =52
-        Y: =271
-        ZIndex: =20
+                Button3_1 As button:
+                    Fill: =RGBA(15, 108, 189, 1)
+                    Height: =30
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |+
+                        =//Set(VarImagenpdf;JSON(Image10.Image;JSONFormat.IncludeBinaryData));;
+                        Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
+                        Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
+                        
+                        ClearCollect(VarimagenesAdjuntos, DataCardValue1.Attachments);
+                        Set(EnvioCorreo, "<!DOCTYPE html>
+                        <html>
+                        <body>
+                        
+                        
+                        <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>
+                        
+                        <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+                        
+                        <p>Fecha: "&DataCardValue19_1.Text&"</p>
+                        <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
+                        <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
+                        <hr>
+                        
+                        <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+                        
+                        <p>Nombre: "&DataCardValue11_2.Text&"</p>
+                        <p>Cédula: "&DataCardValue12_2.Text&"</p>
+                        <p>Vehículo: "&DataCardValue17_2.Text&"</p>
+                        <hr>
+                        
+                        <h2 style='color:Tomato;'> ITEMS </h2>
+                        
+                        <ul>
+                          <li>"&DataCardValue14_2.Text&"</li>
+                        </ul>  
+                        <hr>
+                        
+                        <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+                        
+                        <ul>
+                          <li>"&DataCardValue15_2.Text&"</li>
+                        </ul>  
+                        <hr>
+                        
+                        <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+                        
+                        <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
+                        <hr>
+                        
+                        <h2 style='color:Tomato;'>IMAGEN</h2>
+                        
+                        <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
+                        <hr>
+                        
+                        
+                        </body>
+                        </html>");
+                        Office365Outlook.SendEmailV2(User().Email,"Documento de Almacén", EnvioCorreo,{Bcc:"analista.mantenimiento@partequipos.com"});
+                        
+                        ResetForm(Form2);Navigate(NewExpenseConfirm_3)
+                        
+                    RadiusBottomLeft: =9
+                    RadiusBottomRight: =9
+                    RadiusTopLeft: =9
+                    RadiusTopRight: =9
+                    Size: =12
+                    Text: ="Click Enviar al correo de usuario"
+                    Width: =300
+                    ZIndex: =5
 
-    TextSearchBox2_1 As text:
-        AccessibleLabel: ="Busque personas o agregue direcciones de correo electrónico. Se necesita al menos un destinatario para un envío correcto."
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
-        Height: =70
-        HintText: ="Agregar una dirección de correo electrónico"
-        PaddingLeft: =70
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =14
-        Width: =458
-        X: =35
-        Y: =317
-        ZIndex: =21
+        Container39 As groupContainer.manualLayoutContainer:
+            Height: =871
+            Width: =794
+            Y: =244
+            ZIndex: =4
 
-    LblEmailSubject2_1 As label:
-        Height: =44
-        PaddingLeft: =0
-        Size: =18
-        Text: ="*Asunto"
-        Width: =445
-        Wrap: =false
-        X: =35
-        Y: =411
-        ZIndex: =22
+            TextSearchBox2_1 As text:
+                AccessibleLabel: ="Busque personas o agregue direcciones de correo electrónico. Se necesita al menos un destinatario para un envío correcto."
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Height: =56
+                HintText: ="Agregar una dirección de correo electrónico"
+                PaddingLeft: =70
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Width: =458
+                X: =12
+                Y: =188
+                ZIndex: =1
 
-    TextEmailSubject2_1 As text:
-        AccessibleLabel: ="Se requiere un asunto para enviar un correo electrónico."
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
-        Height: =50
-        HintText: ="Agregar un asunto"
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        TabIndex: =
-        Width: =458
-        X: =35
-        Y: =469
-        ZIndex: =23
+            LblEmailSubject2_1 As label:
+                Height: =36
+                PaddingLeft: =0
+                Size: =18
+                Text: ="*Asunto"
+                Width: =445
+                Wrap: =false
+                X: =18
+                Y: =296
+                ZIndex: =2
 
-    LblEmailMessage2_1 As label:
-        Height: =36
-        PaddingLeft: =0
-        Size: =18
-        Text: ="Mensaje"
-        Width: =445
-        Wrap: =false
-        X: =35
-        Y: =555
-        ZIndex: =24
+            TextEmailSubject2_1 As text:
+                AccessibleLabel: ="Se requiere un asunto para enviar un correo electrónico."
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Height: =70
+                HintText: ="Agregar un asunto"
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                TabIndex: =
+                Width: =458
+                X: =18
+                Y: =366
+                ZIndex: =3
 
-    TextEmailMessage2_1 As text:
-        AccessibleLabel: ="Agregar un mensaje"
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =""
-        Height: =317
-        HintText: ="Agregar un mensaje"
-        Mode: =TextMode.MultiLine
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        TabIndex: =
-        Width: =458
-        X: =35
-        Y: =613
-        ZIndex: =25
+            LblEmailMessage2_1 As label:
+                Height: =29
+                PaddingLeft: =0
+                Size: =18
+                Text: ="Mensaje"
+                Width: =445
+                Wrap: =false
+                X: =25
+                Y: =514
+                ZIndex: =4
 
-    Button5 As button:
-        Fill: =RGBA(0, 0, 0, 1)
-        Height: =65
-        OnSelect: |-
-            =/*Create semicolon separated list of people to email, send the email, reset subject & message fields*/           
-            Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
-            Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
-            
-            Set(EnvioCorreo, "<!DOCTYPE html>
-            <html>
-            <body>
-            
-            
-            <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACÉN PARTEQUIPOS</h1>
-            
-            <h2 style='color:Tomato;'> DATOS GENERALES </h2>
-            
-            <p>Fecha: "&DataCardValue19_1.Text&"</p>
-            <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
-            <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
-            <hr>
-            
-            <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
-            
-            <p>Nombre: "&DataCardValue11_2.Text&"</p>
-            <p>Cédula: "&DataCardValue12_2.Text&"</p>
-            <p>Vehículo: "&DataCardValue17_2.Text&"</p>
-            <hr>
-            
-            <h2 style='color:Tomato;'> ITEMS </h2>
-            
-            <ul>
-              <li>"&DataCardValue14_2.Text&"</li>
-            </ul>  
-            <hr>
-            
-            <h2 style='color:Tomato;'> OBSERVACIONES </h2>
-            
-            <ul>
-              <li>"&DataCardValue15_2.Text&"</li>
-            </ul>  
-            <hr>
-            
-            <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
-            
-            <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
-            <hr>
-            
-            <h2 style='color:Tomato;'>IMAGEN</h2>
-            
-            <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
-            <hr>
-            
-            
-            </body>
-            </html>");
-            
-                      
-            Office365Outlook.SendEmailV2(TextSearchBox2_1.Text, TextEmailSubject2_1.Text ,EnvioCorreo, {Importance:"Normal"});Reset(TextSearchBox2_1);   
-            Reset(TextEmailSubject2_1);           
-            Reset(TextEmailMessage2_1);          
-            
-            
-            ResetForm(Form2);Navigate(NewExpenseConfirm_3)
-        Size: =14
-        Text: ="Enviar"
-        Width: =166
-        X: =314
-        Y: =209
-        ZIndex: =27
+            TextEmailMessage2_1 As text:
+                AccessibleLabel: ="Agregar un mensaje"
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Height: =210
+                HintText: ="Agregar un mensaje"
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                TabIndex: =
+                Width: =458
+                X: =25
+                Y: =563
+                ZIndex: =5
 
-    LblEmailSubject2_2 As label:
-        Height: =34
-        PaddingLeft: =0
-        Size: =18
-        Text: ="*Correo"
-        Width: =445
-        Wrap: =false
-        X: =35
-        Y: =277
-        ZIndex: =28
+            LblEmailSubject2_2 As label:
+                Height: =27
+                PaddingLeft: =0
+                Size: =18
+                Text: ="*Correo"
+                Width: =445
+                Wrap: =false
+                X: =12
+                Y: =134
+                ZIndex: =6
+
+            Button5 As button:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =65
+                OnSelect: |-
+                    =/*Create semicolon separated list of people to email, send the email, reset subject & message fields*/           
+                    Set(VarFirmapdf,JSON(DataCardValue16_2.Image,JSONFormat.IncludeBinaryData))&
+                    Set(VarImagenpdf,JSON(Image10_2.Image,JSONFormat.IncludeBinaryData));
+                    
+                    Set(EnvioCorreo, "<!DOCTYPE html>
+                    <html>
+                    <body>
+                    
+                    
+                    <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACÉN PARTEQUIPOS</h1>
+                    
+                    <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+                    
+                    <p>Fecha: "&DataCardValue19_1.Text&"</p>
+                    <p>Ciudad: "&Text(DataCardValue8_2.Selected.Value)&"</p>
+                    <p>Clase: "&Text(DataCardValue13_2.Selected.Value)&"</p>
+                    <hr>
+                    
+                    <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+                    
+                    <p>Nombre: "&DataCardValue11_2.Text&"</p>
+                    <p>Cédula: "&DataCardValue12_2.Text&"</p>
+                    <p>Vehículo: "&DataCardValue17_2.Text&"</p>
+                    <hr>
+                    
+                    <h2 style='color:Tomato;'> ITEMS </h2>
+                    
+                    <ul>
+                      <li>"&DataCardValue14_2.Text&"</li>
+                    </ul>  
+                    <hr>
+                    
+                    <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+                    
+                    <ul>
+                      <li>"&DataCardValue15_2.Text&"</li>
+                    </ul>  
+                    <hr>
+                    
+                    <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+                    
+                    <img src=" & VarFirmapdf & " style= ' width:200px;heigth:200px'>
+                    <hr>
+                    
+                    <h2 style='color:Tomato;'>IMAGEN</h2>
+                    
+                    <img src=" & VarImagenpdf & " style= ' width:200px;heigth:200px'>
+                    <hr>
+                    
+                    
+                    </body>
+                    </html>");
+                    
+                              
+                    Office365Outlook.SendEmailV2(TextSearchBox2_1.Text, TextEmailSubject2_1.Text ,EnvioCorreo, {Importance:"Normal"});Reset(TextSearchBox2_1);   
+                    Reset(TextEmailSubject2_1);           
+                    Reset(TextEmailMessage2_1);          
+                    
+                    
+                    ResetForm(Form2);Navigate(NewExpenseConfirm_3)
+                Size: =14
+                Text: ="Enviar"
+                Width: =166
+                X: =597
+                Y: =230
+                ZIndex: =7
+
+            LblAppName2_2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =66
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Enviar Correo electrónico"
+                Width: =356
+                Wrap: =false
+                X: =12
+                ZIndex: =8
+
+            LblRecipientCount2_1 As label:
+                Height: =31
+                PaddingLeft: =0
+                Size: =18
+                Text: =
+                Width: =200
+                Wrap: =false
+                X: =420
+                Y: =17
+                ZIndex: =9
 

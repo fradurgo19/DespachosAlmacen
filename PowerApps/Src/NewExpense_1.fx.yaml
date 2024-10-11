@@ -330,6 +330,7 @@
                     AcceptsFocus: =true
                     AlignInContainer: =AlignInContainer.Center
                     BorderColor: =RGBA(189, 49, 51, 1)
+                    BorderThickness: =1
                     DataSource: =DespachosAlmacen
                     DefaultMode: =FormMode.New
                     Fill: =RGBA(255, 255, 255, 1)
@@ -354,7 +355,7 @@
                         Height: =69
                         Required: =true
                         Update: =DataCardValue4.SelectedDate
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -418,7 +419,7 @@
                         Height: =75
                         Required: =false
                         Update: =DataCardValue9.Selected
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =1
                         ZIndex: =1
@@ -506,7 +507,7 @@
                         Height: =90
                         Required: =false
                         Update: =DataCardValue10.Selected
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =2
                         ZIndex: =1
@@ -589,7 +590,7 @@
                         MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, 'PersonaqueRetira (PersonaqueRetira0)')
                         Required: =false
                         Update: =DataCardValue3.Text
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =3
                         ZIndex: =1
@@ -672,7 +673,7 @@
                         MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Cédula)
                         Required: =true
                         Update: =DataCardValue6.Text
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =4
                         ZIndex: =1
@@ -739,7 +740,7 @@
                         MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Título)
                         Required: =false
                         Update: =DataCardValue5.Text
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =7
                         ZIndex: =1
@@ -825,7 +826,7 @@
                         Required: =false
                         Update: =DataCardValue1.Attachments
                         Visible: =true
-                        Width: =640
+                        Width: =639
                         WidthFit: =false
                         X: =0
                         Y: =8
@@ -861,7 +862,7 @@
                         Height: =1118
                         Required: =false
                         Update: =Image3.Image
-                        Width: =640
+                        Width: =639
                         WidthFit: =false
                         X: =0
                         Y: =9
@@ -869,7 +870,7 @@
 
                         DataCardKey2 As label:
                             Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(215, 58, 60, 1)
+                            Fill: =RGBA(255, 0, 0, 1)
                             Height: =41
                             PaddingBottom: =0
                             PaddingLeft: =0
@@ -943,8 +944,11 @@
                             ZIndex: =5
 
                         AddMediaButton1 As addMedia:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 0, 1)
                             Height: =359
                             Size: =14
+                            Text: ="Pulsar o hacer clic para agregar evidencia de la imagen"
                             Width: =579
                             X: =30
                             Y: =139
@@ -964,8 +968,8 @@
                         DataCardKey2_1 As label:
                             Align: =Align.Center
                             Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(166, 215, 153, 1)
-                            Height: =53
+                            Fill: =RGBA(255, 255, 0, 1)
+                            Height: =43
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
@@ -976,7 +980,7 @@
                             Width: =580
                             Wrap: =false
                             X: =30
-                            Y: =49
+                            Y: =60
                             ZIndex: =9
 
                         Checkbox1_1 As checkbox:
@@ -1015,8 +1019,8 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =18
-                            Text: ="Pulse cuadro e Ingrese firma"
+                            Size: =12
+                            Text: ="Pulse el cuadro e Ingrese la firma"
                             Width: =326
                             Wrap: =false
                             X: =30
@@ -1034,7 +1038,7 @@
                         MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Item)
                         Required: =true
                         Update: =DataCardValue26.Text
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =5
                         ZIndex: =2
@@ -1109,7 +1113,7 @@
                         MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Observaciones)
                         Required: =false
                         Update: =DataCardValue27.Text
-                        Width: =640
+                        Width: =639
                         X: =0
                         Y: =6
                         ZIndex: =2
