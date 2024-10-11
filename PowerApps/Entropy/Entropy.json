@@ -15,7 +15,7 @@
     "Button2_1": 601,
     "Button3": 416,
     "Button3_1": 603,
-    "Button4": 364,
+    "Button4": 613,
     "Button5": 610,
     "ButtonCanvas1": 542,
     "ButtonCanvas2": 541,
@@ -205,8 +205,8 @@
     "galleryTemplate2": 426,
     "galleryTemplate2_1": 553,
     "galleryTemplate2_2": 26,
-    "Group1": 365,
     "Group2": 345,
+    "Group3": 614,
     "HeaderAddIcon1": 339,
     "HeaderCircle1": 340,
     "Host": 3,
@@ -357,7 +357,7 @@
   "DoesTestStepsMetadataExist": true,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/11/2024 18:32:41",
+  "HeaderLastSavedDateTimeUTC": "10/11/2024 18:39:28",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "208684f4-ceb4-4121-9d45-3b3f6b32b82a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0fa5409fa60044578535a9abe68eea8b\"",
@@ -413,19 +413,6 @@
     "VarimagenesAdjuntos": 12
   },
   "OrderGroupControls": {
-    "Group1": {
-      "Buscar": 5,
-      "Button4": 10,
-      "ComboBox1": 7,
-      "ComboBox2": 9,
-      "FechaFin": 3,
-      "FechaInicio": 2,
-      "Label5": 1,
-      "Label5_1": 0,
-      "TextCanvas1_3": 6,
-      "TextCanvas1_4": 8,
-      "TextCanvas1_6": 4
-    },
     "Group2": {
       "HeaderAddIcon1": 0,
       "HeaderCircle1": 1,
@@ -433,6 +420,19 @@
       "Label4": 4,
       "MyExpenseHeader_1": 5,
       "MyExpenseTitle_1": 2
+    },
+    "Group3": {
+      "Buscar": 6,
+      "Button4": 0,
+      "ComboBox1": 8,
+      "ComboBox2": 10,
+      "FechaFin": 4,
+      "FechaInicio": 3,
+      "Label5": 2,
+      "Label5_1": 1,
+      "TextCanvas1_3": 7,
+      "TextCanvas1_4": 9,
+      "TextCanvas1_6": 5
     },
     "NewExpenseConfirmGroup": {
       "NewExpenseConfirmCycle": 0,
@@ -677,8 +677,8 @@
     "galleryTemplate2": {},
     "galleryTemplate2_1": {},
     "galleryTemplate2_2": {},
-    "Group1": {},
     "Group2": {},
+    "Group3": {},
     "HeaderAddIcon1": {},
     "HeaderCircle1": {},
     "Host": {},
@@ -1131,8 +1131,8 @@
     "galleryTemplate2": 186,
     "galleryTemplate2_1": 233,
     "galleryTemplate2_2": 295,
-    "Group1": 23,
     "Group2": 20,
+    "Group3": 0,
     "HeaderAddIcon1": 19,
     "HeaderCircle1": 17,
     "Host": 0,
@@ -1312,7 +1312,7 @@
     "ControlCount": {
       "addMedia": 2,
       "attachments": 5,
-      "button": 14,
+      "button": 15,
       "checkbox": 2,
       "circle": 12,
       "combobox": 18,

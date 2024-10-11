@@ -3777,7 +3777,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Group1": {
+    "Group2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -3795,9 +3795,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Group1",
+      "Name": "Group2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3829,7 +3829,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Group2": {
+    "Group3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -3847,9 +3847,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Group2",
+      "Name": "Group3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
