@@ -17,20 +17,12 @@
         "dataSources": {
           "DespachosAlmacen": {
             "tableName": "ef34a249-2c00-4e48-951d-23ee32ed558b"
-          },
-          "DocumentosEntregaRecibidoAlamcen": {
-            "tableName": "56718b35-0110-454f-9272-2c6330bb4fd8"
-          },
-          "ListsUsuarios": {
-            "tableName": "3c93e07f-8785-46ac-9be5-9231b5b0d95f"
           }
         }
       }
     },
     "dataSources": [
       "DespachosAlmacen",
-      "ListsUsuarios",
-      "DocumentosEntregaRecibidoAlamcen",
       "DespachosAlmacen_1"
     ],
     "dependencies": {},
@@ -54,8 +46,7 @@
     },
     "datasets": {},
     "dataSources": [
-      "Office365Outlook",
-      "Office365Outlook_1"
+      "Office365Outlook"
     ],
     "dependencies": {},
     "dependents": [],
@@ -78,69 +69,6 @@
       "eb3c05bf-5740-42ec-86aa-7d1ba748c4e2"
     ],
     "id": "4ac2e2f3-0386-4b34-a3d2-a2c65970e8db"
-  },
-  "6da9c1d9-9616-47b0-a61a-441e53a823b2": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Usuarios de Office 365",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "UsuariosdeOffice365",
-      "UsuariosdeOffice365_1"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "6da9c1d9-9616-47b0-a61a-441e53a823b2"
-  },
-  "802f0985-2347-476c-8100-4ff7c9f59b44": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1682/1.0.1682.3675/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {
-      "https://partequipos2.sharepoint.com/sites/servicioposventa": {
-        "dataSources": {
-          "DespachosAlmacen_1": {
-            "tableName": "ef34a249-2c00-4e48-951d-23ee32ed558b"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "DespachosAlmacen_1"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "802f0985-2347-476c-8100-4ff7c9f59b44"
-  },
-  "8315930e-8369-48d6-9785-e620f1568640": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Tareas de Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1682/1.0.1682.3673/outlooktasks/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_outlooktasks",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "TareasdeOutlook"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "8315930e-8369-48d6-9785-e620f1568640"
   },
   "d20ec29c-f1f1-4804-ab4f-01a55809bc5b": {
     "appActions": [],
