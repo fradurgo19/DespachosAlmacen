@@ -987,7 +987,7 @@
       "MetaDataIDKey": "",
       "Name": "Button5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11951,7 +11951,7 @@
       "MetaDataIDKey": "",
       "Name": "LblEmailSubject2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12166,7 +12166,7 @@
       "MetaDataIDKey": "",
       "Name": "LblRecipientCount2_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14059,7 +14059,7 @@
       "MetaDataIDKey": "",
       "Name": "TextSearchBox2_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
