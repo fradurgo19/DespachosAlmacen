@@ -34,9 +34,9 @@ Inicio As screen:
                 ZIndex: =1
 
         Container6 As groupContainer.manualLayoutContainer:
-            Height: =88
+            Height: =118
             Width: =639
-            Y: =1047
+            Y: =634
             ZIndex: =4
 
             ButtonCanvas3 As Botón:
