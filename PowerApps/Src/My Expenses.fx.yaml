@@ -58,7 +58,7 @@
                     ZIndex: =1
 
         Container10 As groupContainer.manualLayoutContainer:
-            Height: =72
+            Height: =61
             Width: =639
             Y: =53
             ZIndex: =3
@@ -74,7 +74,7 @@
                     Align: =Align.Center
                     Fill: =RGBA(0, 0, 0, 1)
                     FocusedBorderColor: =MyExpenseHeader_1.BorderColor
-                    Height: =79
+                    Height: =66
                     HoverBorderColor: =MyExpenseHeader_1.BorderColor
                     HoverColor: =MyExpenseHeader_1.Color
                     HoverFill: =MyExpenseHeader_1.Fill
@@ -88,7 +88,6 @@
                     Size: =23
                     Text: =
                     Width: =637
-                    Y: =2
                     ZIndex: =1
 
                 MyExpenseTitle_1 As label:
@@ -96,7 +95,7 @@
                     Color: =RGBA(255, 255, 255, 1)
                     Fill: =RGBA(0, 0, 0, 1)
                     FocusedBorderColor: =MyExpenseTitle_1.BorderColor
-                    Height: =51
+                    Height: =43
                     HoverBorderColor: =MyExpenseTitle_1.BorderColor
                     HoverColor: =MyExpenseTitle_1.Color
                     HoverFill: =MyExpenseTitle_1.Fill
@@ -111,7 +110,6 @@
                     Text: ="ENTREGA/RECEPCIÓN ALMACÉN"
                     Width: =447
                     X: =96
-                    Y: =2
                     ZIndex: =2
 
                 HeaderCircle1 As circle:
@@ -120,13 +118,13 @@
                     DisabledFill: =HeaderCircle1.Fill
                     Fill: =RGBA(249, 251, 253, 1)
                     FocusedBorderColor: =HeaderCircle1.BorderColor
-                    Height: =38
+                    Height: =32
                     HoverFill: =HeaderCircle1.Fill
                     OnSelect: =Navigate(NewExpense_1,ScreenTransition.None)
                     PressedFill: =HeaderCircle1.Fill
                     Width: =48
                     X: =569
-                    Y: =30
+                    Y: =23
                     ZIndex: =3
 
                 HeaderAddIcon1 As icon.Add:
@@ -135,7 +133,7 @@
                     Fill: =RGBA(4, 169, 244, 0)
                     FocusedBorderColor: =HeaderAddIcon1.BorderColor
                     FocusedBorderThickness: =0
-                    Height: =24
+                    Height: =20
                     HoverBorderColor: =ColorFade(HeaderAddIcon1.BorderColor, 20%)
                     HoverColor: =ColorFade(HeaderAddIcon1.Color, 20%)
                     HoverFill: =HeaderAddIcon1.Fill
@@ -146,27 +144,26 @@
                     PressedFill: =HeaderAddIcon1.Fill
                     Width: =31
                     X: =577
-                    Y: =36
+                    Y: =28
                     ZIndex: =4
 
                 Icon4 As icon.ArrowLeft:
                     Color: =RGBA(255, 255, 255, 1)
                     Fill: =RGBA(0, 0, 0, 1)
-                    Height: =45
+                    Height: =38
                     Icon: =Icon.ArrowLeft
                     OnSelect: =Exit()
                     Width: =61
-                    Y: =36
+                    Y: =28
                     ZIndex: =5
 
                 Label4 As label:
                     Color: =RGBA(255, 255, 255, 1)
-                    Height: =42
+                    Height: =35
                     OnSelect: =Exit()
                     Size: =11
                     Text: ="Salir"
                     Width: =76
-                    Y: =2
                     ZIndex: =6
 
         Container11 As groupContainer.manualLayoutContainer:
@@ -380,7 +377,7 @@
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
                 TemplatePadding: =0
-                TemplateSize: =232
+                TemplateSize: =272
                 ZIndex: =1
 
                 Title2 As label:
@@ -445,7 +442,7 @@
                     Fill: =RGBA(0, 0, 0, 1)
                     Height: =2
                     OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
+                    Width: =640
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =4
 
@@ -461,13 +458,13 @@
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =101
+                    Height: =147
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =11
+                    Size: =10
                     Text: =ThisItem.Item
                     VerticalAlign: =VerticalAlign.Top
                     Width: =173
@@ -652,7 +649,7 @@
                     Icon: =Icon.Edit
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Form2)
                     Width: =47
-                    X: =538
+                    X: =523
                     Y: =50
                     ZIndex: =16
 
@@ -672,7 +669,7 @@
                     Icon: =Icon.Print
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_1)
                     Width: =42
-                    X: =533
+                    X: =518
                     Y: =125
                     ZIndex: =18
 

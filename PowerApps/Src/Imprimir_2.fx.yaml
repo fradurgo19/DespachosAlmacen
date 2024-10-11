@@ -98,8 +98,8 @@
                     ShowScrollbar: =false
                     TabIndex: =1
                     TemplatePadding: =1
-                    TemplateSize: =200
-                    Width: =500
+                    TemplateSize: =150
+                    Width: =750
                     WrapCount: =4
                     ZIndex: =1
 
