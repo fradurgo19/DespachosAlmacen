@@ -226,54 +226,26 @@ Screens:
                         Image: =Logo
                         Width: =703
                         X: =85
-            - Container22:
-                Control: GroupContainer@1.3.0
-                Variant: ManualLayout
-                Properties:
-                  DropShadow: =DropShadow.None
-                  Height: =59
-                  RadiusBottomLeft: =0
-                  RadiusBottomRight: =0
-                  RadiusTopLeft: =0
-                  RadiusTopRight: =0
-                  Width: =788
-                  X: =6
-                  Y: =123
-                Children:
-                  - Label6_1:
-                      Control: Label@2.5.1
-                      Properties:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(101, 128, 187, 1)
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                        Fill: =RGBA(106, 122, 127, 1)
-                        Font: =Font.'Open Sans'
-                        Height: =48
-                        Size: =14
-                        Text: ="Gestión Almacén"
-                        Width: =788
-                        Y: =11
             - Container23:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
                 Properties:
                   DropShadow: =DropShadow.None
-                  Height: =941
+                  Height: =1014
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
                   RadiusTopLeft: =0
                   RadiusTopRight: =0
                   Width: =788
                   X: =6
-                  Y: =182
+                  Y: =109
                 Children:
                   - Container2_1:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
-                        Height: =935
+                        Height: =Parent.Height
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
@@ -282,7 +254,7 @@ Screens:
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
-                        Width: =788
+                        Width: =Parent.Width
                         Y: =3
                       Children:
                         - Image13_3:
@@ -316,7 +288,7 @@ Screens:
                               Height: =690
                               Item: =Gallery1.Selected
                               LayoutMinHeight: =200
-                              LayoutMinWidth: =300
+                              LayoutMinWidth: =400
                               Width: =FormViewer1.X + Parent.Width
                             Children:
                               - FechaDocumento_DataCard4:
@@ -961,7 +933,7 @@ Screens:
                                     DisabledBorderColor: =RGBA(159, 167, 165, 1)
                                     DisabledFill: =RGBA(193, 193, 193, 0.95)
                                     Height: =131
-                                    Image: =ThisItem.AbsoluteUri
+                                    Image: =ThisItem.Value
                                     OnSelect: =Select(Parent)
                                     PaddingBottom: =1
                                     PaddingLeft: =1

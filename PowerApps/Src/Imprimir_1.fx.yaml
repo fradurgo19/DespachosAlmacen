@@ -156,39 +156,21 @@
                 X: =85
                 ZIndex: =3
 
-        Container22 As groupContainer.manualLayoutContainer:
-            Height: =59
-            Width: =788
-            X: =6
-            Y: =123
-            ZIndex: =3
-
-            Label6_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(106, 122, 127, 1)
-                Height: =48
-                Size: =14
-                Text: ="Gestión Almacén"
-                Width: =788
-                Y: =11
-                ZIndex: =1
-
         Container23 As groupContainer.manualLayoutContainer:
-            Height: =941
+            Height: =1014
             Width: =788
             X: =6
-            Y: =182
+            Y: =109
             ZIndex: =4
 
             Container2_1 As groupContainer.verticalAutoLayoutContainer:
-                Height: =935
+                Height: =Parent.Height
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                 LayoutMode: =LayoutMode.Auto
                 LayoutWrap: =true
-                Width: =788
+                Width: =Parent.Width
                 Y: =3
                 ZIndex: =1
 
@@ -220,7 +202,7 @@
                     Height: =690
                     Item: =Gallery1.Selected
                     LayoutMinHeight: =200
-                    LayoutMinWidth: =300
+                    LayoutMinWidth: =400
                     NumberOfColumns: =2
                     Width: =FormViewer1.X + Parent.Width
                     ZIndex: =3
@@ -758,7 +740,7 @@
 
                     Image10 As image:
                         Height: =131
-                        Image: =ThisItem.AbsoluteUri
+                        Image: =ThisItem.Value
                         OnSelect: =Select(Parent)
                         PaddingBottom: =1
                         PaddingLeft: =1

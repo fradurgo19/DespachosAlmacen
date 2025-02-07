@@ -23,11 +23,11 @@
     "Controls\\25.json": "C8_Xe6Ftz7rxR5oGTnhlp/IAjlGlohfRD/TH7L+Dr9VxGs=",
     "Controls\\289.json": "C8_Bp2OxWYuVLfqld0fhxyPYtbwV39diBgwVJYSexZKnYQ=",
     "Controls\\299.json": "C8_A36RSPDH2Zrq0fxBauS061pdv8KGS3BOrPBvFqXSBmI=",
-    "Controls\\36.json": "C8_eXO3YEAyVogsg7gi+0FPJxAV550co1amdU5jq1mK7mw=",
+    "Controls\\36.json": "C8_keL4nDEuu6+t1OW5WMlne2aomRUYlsgm+dT9sugjhiA=",
     "Controls\\4.json": "C8_EcgpwDIaE5eYIgh462ZiGrINdXe+ObETrIti+U0kalw=",
     "Controls\\88.json": "C8_vP8zlEiPVhsDTn2+WUFXbCTInTaTTSbUXyFVIqK0v2c=",
     "Controls\\96.json": "C8_EydQPY6QP9bGvKbY0tGJhiEvMFW1fcTif5+oTdqPxAU=",
-    "Header.json": "C8_eCRaxvwUdjlVAOkiMdz4kQCJ6ZOTO/LrEbZwype/1To=",
+    "Header.json": "C8_VCjlUsODCghOucHQ7XtjwXO3+Ikv3pm0FYHrpA0/eyQ=",
     "Properties.json": "C8_XVrVINZ0FMXQYc3qSuTNigDaMMGfU3wXtQaJeVI3fpw=",
     "References\\DataSources.json": "C8_WnaVqujtfMpMTM0mA1hHgLCOyDWcbLvt7ahJZEY5tp8=",
     "References\\ModernThemes.json": "C8_cA1P95ClkHEne1ybESfUitRepK875nI9LpmjCmpE+4c=",
@@ -38,7 +38,7 @@
     "Resources\\PublishInfo.json": "C8_XkvkR/sUfFKj7h/pz3TgsUh56+fpQhjfnb8ycv7o2zg=",
     "Src\\App.pa.yaml": "C8_lyfN0/tpWtB40yEz2TBTz1u4UtVGeUZmo4JCwLs1O6w=",
     "Src\\ControlEntradaFirma.pa.yaml": "C8_oY3GrX1dZ87owIuy8mJIDrCXOmcuppxz1Uuq+HNk6ic=",
-    "Src\\Imprimir_1.pa.yaml": "C8_FLMD4e18plN0dYjTc10GoXlP+KJnEburL7c+moHCVt4=",
+    "Src\\Imprimir_1.pa.yaml": "C8_mh6Lmkp7kO2ydVzXozcP1hrg1IeGO2aIG48npxs8lVs=",
     "Src\\Imprimir_2.pa.yaml": "C8_7aJr3UJUwERUhnDkbk7fWOqBGnsWELomKamT4m72h7U=",
     "Src\\Imprimir_3.pa.yaml": "C8_2Rw+dDRuCvK6qeQk25mKW6T5CGj/POjmmKLmtKF/nfg=",
     "Src\\Inicio.pa.yaml": "C8_HuLuOGpsQ3x5G6z2Qi2+1JPFdnqi0RkIGKQ2xHJwMkU=",
@@ -50,5 +50,5 @@
     "Src\\NewExpenseConfirm_3.pa.yaml": "C8_LQaMwTGztPsgYKjnDQqVKZ9b0FqgnGJSgycXA/0mjxI=",
     "Src\\SetupScreen.pa.yaml": "C8_fh+eFuhhlVu1wD3UzG+yMivaymLRL5MwnZNUzWNniAw="
   },
-  "ClientStampedChecksum": "C8_DpPJvVXvv6kVT7VToirzrfI09Frgn1GSGYj85S0rWgg="
+  "ClientStampedChecksum": "C8_J5XN2T+Q0zFiAN212OSQsisyuDj4QpN4Ik5T/DetxkM="
 }
