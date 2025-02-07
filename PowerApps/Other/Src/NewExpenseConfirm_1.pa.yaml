@@ -1,0 +1,146 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  NewExpenseConfirm_1:
+    Properties:
+      Fill: =RGBA(255,255,255,1)
+      Height: =Max(App.Height, App.DesignHeight)
+      LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Container16:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =1136
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =640
+          Children:
+            - Container17:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =531
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                Children:
+                  - NewExpenseConfirmCycle_1:
+                      Control: Circle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 217, 86, 1)
+                        BorderThickness: =4
+                        DisabledFill: =NewExpenseConfirmCycle_1.Fill
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderColor: =NewExpenseConfirmCycle_1.BorderColor
+                        FocusedBorderThickness: =0
+                        Height: =122
+                        HoverFill: =NewExpenseConfirmCycle_1.Fill
+                        PressedFill: =NewExpenseConfirmCycle_1.Fill
+                        Width: =122
+                        X: =260
+                        Y: =360
+                  - NewExpenseConfirmIcon_1:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(0, 217, 86, 1)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =RGBA(193, 193, 193, 0.95)
+                        DisabledFill: =NewExpenseConfirmIcon_1.Fill
+                        FocusedBorderColor: =NewExpenseConfirmIcon_1.BorderColor
+                        FocusedBorderThickness: =0
+                        HoverBorderColor: =ColorFade(NewExpenseConfirmIcon_1.BorderColor, 20%)
+                        HoverColor: =ColorFade(NewExpenseConfirmIcon_1.Color, 20%)
+                        HoverFill: =NewExpenseConfirmIcon_1.Fill
+                        Icon: =Icon.Check
+                        PressedBorderColor: =ColorFade(NewExpenseConfirmIcon_1.BorderColor, -20%)
+                        PressedColor: =ColorFade(NewExpenseConfirmIcon_1.Color, -20%)
+                        PressedFill: =NewExpenseConfirmIcon_1.Fill
+                        X: =289
+                        Y: =389
+            - Container18:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =603
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =639
+                  Y: =531
+                Children:
+                  - NewExpenseConfirmTitleLabel_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(47,41,43,1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        FocusedBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+                        Font: =Font.'Open Sans'
+                        Height: =123
+                        HoverBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+                        HoverColor: =NewExpenseConfirmTitleLabel_1.Color
+                        HoverFill: =NewExpenseConfirmTitleLabel_1.Fill
+                        PressedBorderColor: =NewExpenseConfirmTitleLabel_1.BorderColor
+                        PressedColor: =NewExpenseConfirmTitleLabel_1.Color
+                        PressedFill: =NewExpenseConfirmTitleLabel_1.Fill
+                        Size: =26
+                        Text: |-
+                          ="Su Impresión se ha realizado
+                          con éxito"
+                        Width: =639
+                  - NewExpenseConfirmTimer_1:
+                      Control: Timer@2.1.0
+                      Properties:
+                        AutoStart: =true
+                        BorderColor: =ColorFade(NewExpenseConfirmTimer_1.Fill, -15%)
+                        Color: =RGBA(255,255,255,1)
+                        DisabledBorderColor: =ColorFade(NewExpenseConfirmTimer_1.BorderColor, 70%)
+                        DisabledColor: =ColorFade(NewExpenseConfirmTimer_1.Fill, 90%)
+                        DisabledFill: =ColorFade(NewExpenseConfirmTimer_1.Fill, 70%)
+                        Duration: =2000
+                        Fill: =RGBA(62,96,170,1)
+                        FocusedBorderColor: =NewExpenseConfirmTimer_1.BorderColor
+                        Font: =Font.'Open Sans'
+                        HoverBorderColor: =ColorFade(NewExpenseConfirmTimer_1.BorderColor, 20%)
+                        HoverColor: =NewExpenseConfirmTimer_1.Color
+                        HoverFill: =ColorFade(NewExpenseConfirmTimer_1.Fill, 20%)
+                        OnTimerEnd: =Navigate('My Expenses',ScreenTransition.None)
+                        PressedBorderColor: =NewExpenseConfirmTimer_1.Fill
+                        PressedColor: =NewExpenseConfirmTimer_1.Fill
+                        PressedFill: =NewExpenseConfirmTimer_1.Color
+                        Size: =23
+                        Text: =Text(Time(0, 0, NewExpenseConfirmTimer_1.Value/1000), "hh:mm:ss")
+                        Visible: =false
+                        X: =40
+                        Y: =53
+            - NewExpenseConfirmBackground_1:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(101, 128, 187, 1)
+                  DisabledFill: =NewExpenseConfirmBackground_1.Fill
+                  Fill: =RGBA(62, 96, 170, 0)
+                  FocusedBorderColor: =NewExpenseConfirmBackground_1.BorderColor
+                  Height: =1136
+                  HoverFill: =NewExpenseConfirmBackground_1.Fill
+                  OnSelect: =Navigate('My Expenses',ScreenTransition.None)
+                  PressedFill: =NewExpenseConfirmBackground_1.Fill
+                  Width: =640

@@ -1,0 +1,832 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  My Expenses:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      Height: =Max(App.Height, App.DesignHeight)
+      ImagePosition: =ImagePosition.Center
+      LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+      OnVisible: |-
+        =ClearCollect(DespachosAlmacenLocal,DespachosAlmacen); 
+        DespachosAlmacen;
+        Gallery1; 
+        Gallery1.Selected.'Datos adjuntos'
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Icon3:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(101, 128, 187, 1)
+            Color: =RGBA(189, 49, 51, 1)
+            DisabledBorderColor: =RGBA(159, 167, 165, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            Height: =84
+            Icon: =Icon.DocumentWithContent
+            OnSelect: =Launch("https://partequipos2-my.sharepoint.com/personal/analista_mantenimiento_partequipos_com//_layouts/15/onedrive.aspx?login_hint=analista%2Emantenimiento%40partequipos%2Ecom&id=%2Fpersonal%2Fanalista%5Fmantenimiento%5Fpartequipos%5Fcom%2FDocuments%2FPDFs&view=0")
+            Visible: =false
+            Width: =104
+            X: =378
+            Y: =1052
+      - Label2:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(101, 128, 187, 1)
+            Color: =RGBA(47,41,43,1)
+            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            Fill: =RGBA(189, 49, 51, 1)
+            Font: =Font.'Open Sans'
+            Height: =57
+            Size: =14
+            Text: ="Imprimir PDF"
+            Visible: =false
+            Width: =174
+            X: =466
+            Y: =1065
+      - Container8:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =1136
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =640
+          Children:
+            - Container9:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =53
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =639
+                Children:
+                  - Container1:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: =53
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =639
+                      Children:
+                        - Image1:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledFill: =RGBA(193, 193, 193, 0.95)
+                              Height: =Parent.Height
+                              Image: =Logo
+                              Width: =Parent.Width
+            - Container10:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =61
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =639
+                  Y: =53
+                Children:
+                  - MyExpenseHeader_1:
+                      Control: Label@2.5.1
+                      Group: Group2
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(47,41,43,1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        FocusedBorderColor: =MyExpenseHeader_1.BorderColor
+                        Font: =Font.'Open Sans'
+                        Height: =66
+                        HoverBorderColor: =MyExpenseHeader_1.BorderColor
+                        HoverColor: =MyExpenseHeader_1.Color
+                        HoverFill: =MyExpenseHeader_1.Fill
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        PressedBorderColor: =MyExpenseHeader_1.BorderColor
+                        PressedColor: =MyExpenseHeader_1.Color
+                        PressedFill: =MyExpenseHeader_1.Fill
+                        Size: =23
+                        Text: =
+                        Width: =637
+                  - MyExpenseTitle_1:
+                      Control: Label@2.5.1
+                      Group: Group2
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        FocusedBorderColor: =MyExpenseTitle_1.BorderColor
+                        Font: =Font.'Open Sans'
+                        Height: =43
+                        HoverBorderColor: =MyExpenseTitle_1.BorderColor
+                        HoverColor: =MyExpenseTitle_1.Color
+                        HoverFill: =MyExpenseTitle_1.Fill
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        PressedBorderColor: =MyExpenseTitle_1.BorderColor
+                        PressedColor: =MyExpenseTitle_1.Color
+                        PressedFill: =MyExpenseTitle_1.Fill
+                        Size: =18
+                        Text: ="ENTREGA/RECEPCIÓN ALMACÉN"
+                        Width: =447
+                        X: =96
+                  - HeaderCircle1:
+                      Control: Circle@2.3.0
+                      Group: Group2
+                      Properties:
+                        BorderColor: =RGBA(213, 25, 32, 1)
+                        BorderThickness: =4
+                        DisabledFill: =HeaderCircle1.Fill
+                        Fill: =RGBA(249, 251, 253, 1)
+                        FocusedBorderColor: =HeaderCircle1.BorderColor
+                        Height: =32
+                        HoverFill: =HeaderCircle1.Fill
+                        OnSelect: =Navigate(NewExpense_1,ScreenTransition.None)
+                        PressedFill: =HeaderCircle1.Fill
+                        Width: =48
+                        X: =569
+                        Y: =23
+                  - HeaderAddIcon1:
+                      Control: Classic/Icon@2.5.0
+                      Group: Group2
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(213, 25, 32, 1)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =RGBA(193, 193, 193, 0.95)
+                        DisabledFill: =HeaderAddIcon1.Fill
+                        Fill: =RGBA(4, 169, 244, 0)
+                        FocusedBorderColor: =HeaderAddIcon1.BorderColor
+                        FocusedBorderThickness: =0
+                        Height: =20
+                        HoverBorderColor: =ColorFade(HeaderAddIcon1.BorderColor, 20%)
+                        HoverColor: =ColorFade(HeaderAddIcon1.Color, 20%)
+                        HoverFill: =HeaderAddIcon1.Fill
+                        Icon: =Icon.Add
+                        OnSelect: =Navigate(NewExpense_1,ScreenTransition.None)
+                        PressedBorderColor: =ColorFade(HeaderAddIcon1.BorderColor, -20%)
+                        PressedColor: =ColorFade(HeaderAddIcon1.Color, -20%)
+                        PressedFill: =HeaderAddIcon1.Fill
+                        Width: =31
+                        X: =577
+                        Y: =28
+                  - Icon4:
+                      Control: Classic/Icon@2.5.0
+                      Group: Group2
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =RGBA(193, 193, 193, 0.95)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Height: =38
+                        Icon: =Icon.ArrowLeft
+                        OnSelect: =Exit()
+                        Width: =61
+                        Y: =28
+                  - Label4:
+                      Control: Label@2.5.1
+                      Group: Group2
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Font: =Font.'Open Sans'
+                        Height: =35
+                        OnSelect: =Exit()
+                        Size: =11
+                        Text: ="Salir"
+                        Width: =76
+            - Container11:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =342
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                  Y: =126
+                Children:
+                  - FechaInicio:
+                      Control: Classic/DatePicker@2.6.0
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(189, 49, 51, 1)
+                        Color: =RGBA(47, 41, 43, 1)
+                        DefaultDate: |
+                          =DateAdd(Today(), -Day(Today()) + 1)
+                        DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        Font: =Font.'Open Sans'
+                        Format: ="dd-mm-yyyy"
+                        Height: =50
+                        IconBackground: =RGBA(35, 31, 32, 1)
+                        IconFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        OnSelect: =
+                        Size: =15
+                        StartYear: =2000
+                        Width: =190
+                        X: =34
+                        Y: =35
+                  - TextCanvas1_3:
+                      Control: Text@0.0.50
+                      Group: Group3
+                      Properties:
+                        FontColor: =Color.Black
+                        Height: =42
+                        Size: =20
+                        Text: ="Clase:"
+                        Width: =85
+                        X: =35
+                        Y: =182
+                  - ComboBox1:
+                      Control: Classic/ComboBox@2.4.0
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(189, 49, 51, 1)
+                        ChevronBackground: =RGBA(0, 0, 0, 1)
+                        ChevronDisabledBackground: =RGBA(189, 49, 51, 1)
+                        ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        ChevronFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        ChevronHoverBackground: =RGBA(189, 49, 51, 1)
+                        ChevronHoverFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Open Sans'
+                        Height: =37
+                        HoverColor: =RGBA(47, 41, 43, 1)
+                        HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                        IsSearchable: =false
+                        Items: =Choices(DespachosAlmacen.Clase)
+                        PressedColor: =RGBA(255,255,255,1)
+                        PressedFill: =RGBA(224, 86, 6, 1)
+                        SearchFields: =["Value"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255,255,255,1)
+                        SelectionFill: =RGBA(189, 49, 51, 1)
+                        Size: =14
+                        TabIndex: =-1
+                        Tooltip: ="Despacho o entrega"
+                        Width: =283
+                        X: =179
+                        Y: =187
+                  - TextCanvas1_4:
+                      Control: Text@0.0.50
+                      Group: Group3
+                      Properties:
+                        FontColor: =Color.Black
+                        Height: =79
+                        Size: =20
+                        Text: ="Ciudad:"
+                        Width: =105
+                        X: =35
+                        Y: =235
+                  - ComboBox2:
+                      Control: Classic/ComboBox@2.4.0
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(189, 49, 51, 1)
+                        ChevronBackground: =RGBA(0, 0, 0, 1)
+                        ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                        ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        ChevronFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        ChevronHoverBackground: =RGBA(189, 49, 51, 1)
+                        ChevronHoverFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Open Sans'
+                        Height: =33
+                        HoverColor: =RGBA(47, 41, 43, 1)
+                        HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                        IsSearchable: =false
+                        Items: =Choices(DespachosAlmacen.Ciudad)
+                        PressedColor: =RGBA(255,255,255,1)
+                        PressedFill: =RGBA(233, 79, 76, 1)
+                        SearchFields: =["Value"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255,255,255,1)
+                        SelectionFill: =RGBA(189, 49, 51, 1)
+                        Size: =14
+                        Tooltip: ="Sede"
+                        Width: =283
+                        X: =179
+                        Y: =258
+                  - Buscar:
+                      Control: Classic/TextInput@2.3.2
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(189, 49, 51, 1)
+                        Color: =RGBA(47, 41, 43, 1)
+                        Default: =
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        Font: =Font.'Open Sans'
+                        Height: =50
+                        HintText: ="Buscar por Nombre de Item"
+                        HoverBorderColor: =RGBA(101, 128, 187, 1)
+                        HoverColor: =RGBA(47, 41, 43, 1)
+                        HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Size: =15
+                        Width: =283
+                        X: =179
+                        Y: =117
+                  - FechaFin:
+                      Control: Classic/DatePicker@2.6.0
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(189, 49, 51, 1)
+                        Color: =RGBA(47, 41, 43, 1)
+                        DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        Font: =Font.'Open Sans'
+                        Format: ="dd-mm-yyyy"
+                        Height: =50
+                        IconBackground: =RGBA(35, 31, 32, 1)
+                        IconFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                        OnSelect: =
+                        Size: =15
+                        Width: =179
+                        X: =400
+                        Y: =35
+                  - TextCanvas1_6:
+                      Control: Text@0.0.50
+                      Group: Group3
+                      Properties:
+                        FontColor: =Color.Black
+                        Height: =30
+                        Size: =20
+                        Text: ="Buscar:"
+                        Width: =85
+                        X: =35
+                        Y: =117
+                  - Label5:
+                      Control: Label@2.5.1
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =23
+                        Size: =15
+                        Text: ="Fecha Inicio"
+                        Width: =137
+                        X: =34
+                        Y: =12
+                  - Label5_1:
+                      Control: Label@2.5.1
+                      Group: Group3
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =23
+                        Size: =15
+                        Text: ="Fecha Fin"
+                        Width: =129
+                        X: =400
+                        Y: =12
+                  - Button4:
+                      Control: Classic/Button@2.2.0
+                      Group: Group3
+                      Properties:
+                        BorderColor: =ColorFade(Self.Fill, -15%)
+                        Color: =RGBA(255,255,255,1)
+                        DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =57
+                        HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                        HoverColor: =Self.Color
+                        HoverFill: =ColorFade(Self.Fill, 20%)
+                        OnSelect: |-
+                          =Refresh([@DespachosAlmacen]);
+                          ClearCollect(DespachosAlmacenLocal,DespachosAlmacen);
+                          ClearCollect(SalidaEntregaEquipo,DespachosAlmacen);
+                          Reset(ComboBox1);
+                          Reset(ComboBox2);
+                          Reset(FechaInicio);
+                          Reset(Buscar);
+                          Reset([@Gallery1])
+                        PressedBorderColor: =Self.Fill
+                        PressedColor: =Self.Fill
+                        PressedFill: =Self.Color
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =10
+                        Text: ="Refrescar y Actualizar"
+                        Width: =96
+                        X: =483
+                        Y: =147
+            - Container12:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =666
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                  Y: =468
+                Children:
+                  - Gallery1:
+                      Control: Gallery@2.15.0
+                      Variant: BrowseLayout_Vertical_ThreeTextVariant_ver5.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderThickness: =1
+                        Fill: =RGBA(180, 214, 250, 1)
+                        Height: =661
+                        Items: |-
+                          =Sort(
+                              Filter(
+                                  DespachosAlmacen,
+                                 (Buscar.Text in Item || Buscar.Text in Observaciones || IsBlank(Buscar.Text)) &&
+                                  (Clase.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) && (Ciudad.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) && (FechaDocumento >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) && (FechaDocumento <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate))
+                              ),
+                              Modificado,
+                              SortOrder.Descending
+                          )
+                        ShowNavigation: =true
+                        TemplateSize: =272
+                      Children:
+                        - Title2:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =36
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =11
+                              Text: =ThisItem.FechaDocumento
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =155
+                              X: =10
+                              Y: =36
+                        - Subtitle2:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =34
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =11
+                              Text: =ThisItem.IdDespacho
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =218
+                              X: =329
+                              Y: =38
+                        - Body1:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =34
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =11
+                              Text: =ThisItem.Ciudad.Value
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =112
+                              X: =186
+                              Y: =38
+                        - Separator2:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 255, 1)
+                              Fill: =RGBA(0, 0, 0, 1)
+                              Height: =2
+                              OnSelect: =Select(Parent)
+                              Width: =640
+                              Y: =Parent.TemplateHeight - Self.Height
+                        - Rectangle2:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              Fill: =RGBA(101,128,187,1)
+                              Height: =Parent.TemplateHeight - Separator2.Height
+                              OnSelect: =Select(Parent)
+                              Visible: =ThisItem.IsSelected
+                              Width: =4
+                        - Title2_1:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =147
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =10
+                              Text: =ThisItem.Item
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =173
+                              X: =10
+                              Y: =123
+                        - Body1_1:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =37
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =11
+                              Text: =ThisItem.Clase.Value
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =105
+                              X: =194
+                              Y: =139
+                        - Body1_2:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =39
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =11
+                              Text: =ThisItem.'Creado por'.DisplayName
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =180
+                              X: =334
+                              Y: =139
+                        - Title2_2:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="Fecha:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =60
+                              X: =10
+                        - Title2_3:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="Sede:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =67
+                              X: =186
+                        - Title2_4:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="Item:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =50
+                              X: =15
+                              Y: =79
+                        - Title2_5:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="Tipo:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =49
+                              X: =191
+                              Y: =79
+                        - Title2_6:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="Autor:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =58
+                              X: =325
+                              Y: =82
+                        - Title2_7:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 1)
+                              DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Font: =Font.'Open Sans'
+                              FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                              Height: =31
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =12
+                              Text: ="ID:"
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =33
+                              X: =325
+                        - Image5:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledFill: =RGBA(193, 193, 193, 0.95)
+                              Height: =77
+                              Image: =First(ThisItem.'Datos adjuntos').Value
+                              ImagePosition: =ImagePosition.Fill
+                              OnSelect: =Select(Parent)
+                              Width: =131
+                              X: =194
+                              Y: =176
+                        - Icon6:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledColor: =RGBA(193, 193, 193, 0.95)
+                              Height: =39
+                              Icon: =Icon.Edit
+                              OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Form2)
+                              Width: =47
+                              X: =523
+                              Y: =50
+                        - Icon7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledColor: =RGBA(193, 193, 193, 0.95)
+                              Height: =50
+                              Icon: =Icon.ChevronRight
+                              OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_2)
+                              Width: =33
+                              X: =596
+                              Y: =50
+                        - Icon5:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledColor: =RGBA(193, 193, 193, 0.95)
+                              Height: =45
+                              Icon: =Icon.Print
+                              OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_1)
+                              Width: =42
+                              X: =518
+                              Y: =125
+                        - Icon9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledColor: =RGBA(193, 193, 193, 0.95)
+                              Height: =54
+                              Icon: =Icon.Mail
+                              OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_3)
+                              Width: =44
+                              X: =585
+                              Y: =123
+                        - Image5_1:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 1)
+                              DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                              DisabledFill: =RGBA(193, 193, 193, 0.95)
+                              Height: =77
+                              Image: =ThisItem.Firma1
+                              ImagePosition: =ImagePosition.Fill
+                              OnSelect: =Select(Parent)
+                              Width: =120
+                              X: =345
+                              Y: =176

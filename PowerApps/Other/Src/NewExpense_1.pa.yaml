@@ -1,0 +1,1371 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  NewExpense_1:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      Height: =Max(App.Height, App.DesignHeight)
+      ImagePosition: =ImagePosition.Center
+      LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+      OnVisible: |-
+        =UpdateContext({Defaults: false, DefaultDate: Today(), DefaultTextValue: "1"});
+        UpdateContext({Defaults: true, DefaultDate: Today(), DefaultTextValue: ""});
+        ClearCollect(DefaultRecord, "")
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Icon1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(189, 49, 51, 1)
+            Color: =RGBA(189, 49, 51, 1)
+            DisabledBorderColor: =RGBA(159, 167, 165, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            Height: =60
+            Icon: =Icon.DocumentPDF
+            OnSelect: |-
+              =Office365Outlook.SendEmailV2(User().Email,"Documento Recibido de Almacén", "PDF desde PowerApps",
+              {Attachments: Table({Name: "Recibido.pdf",ContentBytes:PDF(NewExpense_1,{ExpandContainers:true})})})
+            Visible: =false
+            Width: =75
+            X: =257
+            Y: =1061
+      - Label2_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(189, 49, 51, 1)
+            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            Font: =Font.'Open Sans'
+            Height: =31
+            Size: =12
+            Text: ="Adjuntar Imagenes"
+            Visible: =false
+            Width: =82
+            X: =523
+            Y: =979
+      - AdjuntarControl:
+          Control: Button@0.0.44
+          Properties:
+            BasePaletteColor: =RGBA(189, 49, 51, 1)
+            Height: =65
+            OnSelect: =AdjuntarDocumento.Run({name:First(AdjuntarControl1.Attachments).Name,contentBytes:First(AdjuntarControl1.Attachments).Value},First(AdjuntarControl1.Attachments).Value)
+            Text: ="Adjuntar a Biblioteca"
+            Visible: =false
+            Width: =154
+            X: =437
+            Y: =611
+      - AdjuntarControl1:
+          Control: Attachments@2.3.0
+          Properties:
+            BorderColor: =RGBA(189, 49, 51, 1)
+            Color: =RGBA(47, 41, 43, 1)
+            DisabledBorderColor: =RGBA(189, 49, 51, 1)
+            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+            DropTargetTextColor: =RGBA(189, 49, 51, 1)
+            Font: =Font.'Open Sans'
+            Height: =31
+            HoverColor: =RGBA(47, 41, 43, 1)
+            HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+            ItemColor: =RGBA(255,255,255,1)
+            ItemFill: =RGBA(62,96,170,1)
+            ItemHoverColor: =RGBA(47, 41, 43, 1)
+            ItemHoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+            Items: =Blank()
+            PaddingBottom: =5
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedColor: =RGBA(255,255,255,1)
+            PressedFill: =RGBA(101,128,187,1)
+            Size: =12
+            Tooltip: ="Añade Documentos"
+            Visible: =false
+            Width: =254
+            X: =32
+            Y: =664
+      - Icon1_3:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(189, 49, 51, 1)
+            Color: =RGBA(189, 49, 51, 1)
+            DisabledBorderColor: =RGBA(159, 167, 165, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            Height: =83
+            Icon: =Icon.DocumentPDF
+            OnSelect: =Set(VarPdf, PDFs.Run(HtmlText2.HtmlText))
+            Visible: =false
+            Width: =113
+            X: =183
+            Y: =1050
+      - Icon2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(189, 49, 51, 1)
+            Color: =RGBA(189, 49, 51, 1)
+            DisabledBorderColor: =RGBA(159, 167, 165, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            Height: =86
+            Icon: =Icon.Save
+            OnSelect: |+
+              =Set(VarFirma,JSON(Image3.Image,JSONFormat.IncludeBinaryData))&
+              Set(VarImagenes,JSON(UploadedImage1.Image,JSONFormat.IncludeBinaryData));
+              ClearCollect(VarimagenesAdjuntos, DataCardValue1.Attachments);
+              Set(EnvioCorreo, "<!DOCTYPE html>
+              <html>
+              <body>
+
+
+              <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>
+
+              <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+
+              <p>Fecha: "&DataCardValue4.SelectedDate&"</p>
+              <p>Ciudad: "&Text(DataCardValue9.Selected.Value)&"</p>
+              <p>Clase: "&Text(DataCardValue10.Selected.Value)&"</p>
+              <hr>
+
+              <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+
+              <p>Nombre: "&DataCardValue3.Text&"</p>
+              <p>Cédula: "&DataCardValue6.Text&"</p>
+              <p>Vehículo: "&DataCardValue5.Text&"</p>
+              <hr>
+
+              <h2 style='color:Tomato;'> ITEMS </h2>
+
+              <ul>
+                <li>"&DataCardValue26.Text&"</li>
+              </ul>  
+              <hr>
+
+              <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+
+              <ul>
+                <li>"&DataCardValue27.Text&"</li>
+              </ul>  
+              <hr>
+
+              <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>
+
+              <img src=" & VarFirma & " style= ' width:200px;heigth:200px'>
+              <hr>
+
+              <h2 style='color:Tomato;'>IMAGEN</h2>
+
+              <img src=" & VarImagenes & " style= ' width:200px;heigth:200px'>
+              <hr>
+
+
+              </body>
+              </html>");
+              Office365Outlook.SendEmailV2(User().Email,"Documento de Almacén", EnvioCorreo,{Bcc:"analista.mantenimiento@partequipos.com"})
+
+
+
+            Visible: =false
+            Width: =134
+            X: =37
+            Y: =1050
+      - Container26:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =1136
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =640
+          Children:
+            - Container27:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =67
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                Children:
+                  - Image1_5:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledFill: =RGBA(193, 193, 193, 0.95)
+                        Height: =67
+                        Image: =Logo
+                        Width: =640
+                  - DataCardKey1:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Font: =Font.'Open Sans'
+                        Height: =37
+                        Size: =15
+                        Text: ="Adjuntar control"
+                        Visible: =false
+                        Width: =174
+                        X: =139
+                        Y: =30
+                  - HtmlText2:
+                      Control: HtmlViewer@2.1.0
+                      Properties:
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =63
+                        HtmlText: |-
+                          ="<!DOCTYPE html>
+                          <html>
+                          <body>
+
+
+                          <h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACÉN</h1>
+
+                          <h2 style='color:Tomato;'> DATOS GENERALES </h2>
+
+                          <p>Fecha: "&DataCardValue4.SelectedDate&"</p>
+                          <p>Ciudad: "&Text(DataCardValue9.Selected.Value)&"</p>
+                          <p>Clase: "&Text(DataCardValue10.Selected.Value)&"</p>
+                          <hr>
+
+                          <h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>
+
+                          <p>Nombre: "&DataCardValue3.Text&"</p>
+                          <p>Cédula: "&DataCardValue6.Text&"</p>
+                          <p>Vehículo: "&DataCardValue5.Text&"</p>
+                          <hr>
+
+                          <h2 style='color:Tomato;'> ITEMS </h2>
+
+                          <ul>
+                            <li>"&DataCardValue26.Text&"</li>
+                          </ul>  
+                          <hr>
+
+                          <h2 style='color:Tomato;'> OBSERVACIONES </h2>
+
+                          <ul>
+                            <li>"&DataCardValue27.Text&"</li>
+                          </ul>  
+                          <hr>
+
+                          <h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN</h2>
+
+                          <img src=" & VarFirma & " style= ' width:200px;heigth:200px'>
+                          <hr>
+
+                          <h2 style='color:Tomato;'>IMAGEN</h2>
+
+                          <img src=" & VarImagenes & " style= ' width:200px;heigth:200px'>
+                          <hr>
+                          <hr>
+
+                          </body>
+                          </html>"
+                        Size: =15
+                        Visible: =false
+                        Width: =640
+                        Y: =4
+            - Container28:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =67
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                  Y: =67
+                Children:
+                  - NewExpenseRectQuickActionBar1_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        DisabledFill: =NewExpenseRectQuickActionBar1_1.Fill
+                        Fill: =RGBA(0, 0, 0, 1)
+                        FocusedBorderColor: =NewExpenseRectQuickActionBar1_1.BorderColor
+                        FocusedBorderThickness: =0
+                        Height: =58
+                        HoverFill: =NewExpenseRectQuickActionBar1_1.Fill
+                        PressedFill: =NewExpenseRectQuickActionBar1_1.Fill
+                        Width: =Parent.Width
+                        Y: =9
+                  - NewExpenseHeaderTitle_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        FocusedBorderColor: =NewExpenseHeaderTitle_1.BorderColor
+                        Font: =Font.'Open Sans'
+                        Height: =52
+                        HoverBorderColor: =NewExpenseHeaderTitle_1.BorderColor
+                        HoverColor: =NewExpenseHeaderTitle_1.Color
+                        HoverFill: =NewExpenseHeaderTitle_1.Fill
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        PressedBorderColor: =NewExpenseHeaderTitle_1.BorderColor
+                        PressedColor: =NewExpenseHeaderTitle_1.Color
+                        PressedFill: =NewExpenseHeaderTitle_1.Fill
+                        Size: =20
+                        Text: ="ENTREGA/RECEPCIÓN"
+                        Width: =318
+                        X: =171
+                        Y: =15
+                  - NewExpenseBackIcon_1:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                        DisabledColor: =RGBA(193, 193, 193, 0.95)
+                        DisabledFill: =NewExpenseBackIcon_1.Fill
+                        FocusedBorderColor: =NewExpenseBackIcon_1.BorderColor
+                        FocusedBorderThickness: =0
+                        Height: =52
+                        HoverBorderColor: =ColorFade(NewExpenseBackIcon_1.BorderColor, 20%)
+                        HoverColor: =ColorFade(NewExpenseBackIcon_1.Color, 20%)
+                        HoverFill: =NewExpenseBackIcon_1.Fill
+                        Icon: =Icon.ChevronLeft
+                        OnSelect: =ResetForm(Form2);Navigate('My Expenses',BorderStyle.None)
+                        PressedBorderColor: =ColorFade(NewExpenseBackIcon_1.BorderColor, -20%)
+                        PressedColor: =ColorFade(NewExpenseBackIcon_1.Color, -20%)
+                        PressedFill: =NewExpenseBackIcon_1.Fill
+                        Width: =34
+                        X: =32
+                        Y: =9
+                  - Label4_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(101, 128, 187, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =30
+                        OnSelect: =ResetForm(Form2);Navigate('My Expenses',BorderStyle.None)
+                        Size: =15
+                        Text: ="Atras"
+                        Width: =92
+                        X: =63
+                        Y: =16
+            - Container29:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =902
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                  Y: =134
+                Children:
+                  - Container7:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: =860
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutWrap: =true
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =640
+                        Y: =40
+                      Children:
+                        - Form2:
+                            Control: Form@2.4.2
+                            Variant: Classic
+                            Layout: Vertical
+                            Properties:
+                              AcceptsFocus: =true
+                              AlignInContainer: =AlignInContainer.Center
+                              BorderColor: =RGBA(189, 49, 51, 1)
+                              BorderThickness: =1
+                              DataSource: =DespachosAlmacen
+                              DefaultMode: =FormMode.New
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Height: =0
+                              Item: =Gallery1.Selected
+                              LayoutMinHeight: =500
+                              OnSuccess: |
+                                =Navigate(NewExpenseConfirm,ScreenTransition.None)
+                            Children:
+                              - Ciudad_DataCard2:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicComboBoxEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Ciudad"
+                                    Default: =ThisItem.Ciudad
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Ciudad)
+                                    Height: =75
+                                    Required: =false
+                                    Update: =DataCardValue9.Selected
+                                    Width: =639
+                                    Y: =1
+                                  Children:
+                                    - DataCardKey10:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(215, 58, 60, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =47
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =287
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue9:
+                                        Control: Classic/ComboBox@2.4.0
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          ChevronBackground: =RGBA(189, 49, 51, 1)
+                                          ChevronDisabledBackground: =RGBA(189, 49, 51, 1)
+                                          ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          ChevronFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                                          ChevronHoverBackground: =RGBA(189, 49, 51, 1)
+                                          ChevronHoverFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                                          DefaultSelectedItems: =Parent.Default
+                                          DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayFields: =["Value"]
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Height: =55
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.BlanchedAlmond
+                                          InputTextPlaceholder: ="Ciudad"
+                                          Items: =Choices([@DespachosAlmacen].Ciudad)
+                                          PaddingBottom: =5
+                                          PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          PressedColor: =RGBA(255,255,255,1)
+                                          PressedFill: =RGBA(189, 49, 51, 1)
+                                          SearchFields: =["Value"]
+                                          SelectMultiple: =false
+                                          SelectionColor: =RGBA(255,255,255,1)
+                                          SelectionFill: =RGBA(189, 49, 51, 1)
+                                          Size: =13
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                                    - ErrorMessage9:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue9.Y + DataCardValue9.Height
+                                    - StarVisible10:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(101,128,187,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =DataCardKey10.Height
+                                          PaddingBottom: =DataCardKey10.PaddingBottom
+                                          PaddingLeft: =DataCardKey10.PaddingLeft
+                                          PaddingRight: =DataCardKey10.PaddingRight
+                                          PaddingTop: =DataCardKey10.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey10.Y
+                              - Clase_DataCard2:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicComboBoxEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Clase"
+                                    Default: =ThisItem.Clase
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Clase)
+                                    Height: =90
+                                    Required: =false
+                                    Update: =DataCardValue10.Selected
+                                    Width: =639
+                                    Y: =2
+                                  Children:
+                                    - DataCardKey11:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(215, 58, 60, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =46
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =280
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue10:
+                                        Control: Classic/ComboBox@2.4.0
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          ChevronBackground: =RGBA(189, 49, 51, 1)
+                                          ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                                          ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          ChevronFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                                          ChevronHoverBackground: =RGBA(101,128,187,1)
+                                          ChevronHoverFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          DefaultSelectedItems: =Parent.Default
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayFields: =["Value"]
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Height: =68
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                                          InputTextPlaceholder: ="Clase"
+                                          Items: =Choices([@DespachosAlmacen].Clase)
+                                          PaddingBottom: =5
+                                          PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          PressedColor: =RGBA(255,255,255,1)
+                                          PressedFill: =RGBA(101,128,187,1)
+                                          SearchFields: =["Value"]
+                                          SelectMultiple: =false
+                                          SelectionColor: =RGBA(255,255,255,1)
+                                          SelectionFill: =RGBA(189, 49, 51, 1)
+                                          Size: =13
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                                    - ErrorMessage10:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue10.Y + DataCardValue10.Height
+                                    - StarVisible11:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(101,128,187,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =DataCardKey11.Height
+                                          PaddingBottom: =DataCardKey11.PaddingBottom
+                                          PaddingLeft: =DataCardKey11.PaddingLeft
+                                          PaddingRight: =DataCardKey11.PaddingRight
+                                          PaddingTop: =DataCardKey11.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey11.Y
+                              - PersonaqueRetira_DataCard1:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicTextualEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="PersonaqueRetira0"
+                                    Default: =ThisItem.'PersonaqueRetira (PersonaqueRetira0)'
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,'PersonaqueRetira (PersonaqueRetira0)')
+                                    Height: =51
+                                    MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, 'PersonaqueRetira (PersonaqueRetira0)')
+                                    Required: =false
+                                    Update: =DataCardValue3.Text
+                                    Width: =639
+                                    Y: =3
+                                  Children:
+                                    - DataCardKey3:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =50
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: ="Entregado A/ Recibido Por:"
+                                          Width: =283
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue3:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =Parent.Default
+                                          DelayOutput: =true
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Height: =50
+                                          HoverBorderColor: =RGBA(101, 128, 187, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.Gold
+                                          MaxLength: =Parent.MaxLength
+                                          PaddingLeft: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =13
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                                    - ErrorMessage2:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue3.Y + DataCardValue3.Height
+                                    - StarVisible3:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(101,128,187,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =DataCardKey3.Height
+                                          PaddingBottom: =DataCardKey3.PaddingBottom
+                                          PaddingLeft: =DataCardKey3.PaddingLeft
+                                          PaddingRight: =DataCardKey3.PaddingRight
+                                          PaddingTop: =DataCardKey3.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey3.Y
+                              - Cédula_DataCard1:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicTextualEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="PersonaqueRetira"
+                                    Default: =ThisItem.Cédula
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Cédula)
+                                    Height: =64
+                                    MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Cédula)
+                                    Required: =true
+                                    Update: =DataCardValue6.Text
+                                    Width: =639
+                                    Y: =4
+                                  Children:
+                                    - DataCardKey7:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =40
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =278
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue6:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =Parent.Default
+                                          DelayOutput: =true
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Format: =TextFormat.Number
+                                          Height: =50
+                                          HoverBorderColor: =RGBA(101, 128, 187, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.Gold
+                                          MaxLength: =Parent.MaxLength
+                                          PaddingLeft: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =13
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                                    - ErrorMessage3:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue6.Y + DataCardValue6.Height
+                              - Vehículo_DataCard1:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicTextualEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Title"
+                                    Default: =ThisItem.Título
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Título)
+                                    Height: =134
+                                    MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Título)
+                                    Required: =false
+                                    Update: =DataCardValue5.Text
+                                    Width: =639
+                                    Y: =7
+                                  Children:
+                                    - DataCardKey6:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =35
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =298
+                                          Wrap: =false
+                                          X: =312
+                                          Y: =10
+                                    - DataCardValue5:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =Parent.Default
+                                          DelayOutput: =true
+                                          DisabledBorderColor: =RGBA(255, 255, 255, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Height: =60
+                                          HoverBorderColor: =RGBA(189, 49, 51, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.Gold
+                                          MaxLength: =Parent.MaxLength
+                                          PaddingLeft: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =14
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                                    - ErrorMessage6:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue5.Y + DataCardValue5.Height
+                                    - StarVisible6:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(101,128,187,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =DataCardKey6.Height
+                                          PaddingBottom: =DataCardKey6.PaddingBottom
+                                          PaddingLeft: =DataCardKey6.PaddingLeft
+                                          PaddingRight: =DataCardKey6.PaddingRight
+                                          PaddingTop: =DataCardKey6.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey6.Y
+                              - Datos adjuntos_DataCard1:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicAttachmentsEdit
+                                  Properties:
+                                    BorderColor: =RGBA(189, 49, 51, 1)
+                                    DataField: ="{Attachments}"
+                                    Default: =ThisItem.'Datos adjuntos'
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,'Datos adjuntos')
+                                    Height: =184
+                                    Required: =false
+                                    Update: =DataCardValue1.Attachments
+                                    Width: =639
+                                    Y: =8
+                                  Children:
+                                    - DataCardValue1:
+                                        Control: Attachments@2.3.0
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          DropTargetTextColor: =RGBA(189, 49, 51, 1)
+                                          Fill: =RGBA(166, 215, 153, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =174
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                                          ItemColor: =RGBA(255,255,255,1)
+                                          ItemFill: =RGBA(62,96,170,1)
+                                          ItemHoverColor: =RGBA(47, 41, 43, 1)
+                                          ItemHoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                                          Items: =Parent.Default
+                                          PaddingBottom: =5
+                                          PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          PressedColor: =RGBA(255,255,255,1)
+                                          PressedFill: =RGBA(101,128,187,1)
+                                          Size: =12
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =
+                              - Firma1_DataCard1:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicLargePicture
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Firma1"
+                                    Default: =ThisItem.Firma1
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Firma1)
+                                    Height: =1118
+                                    Required: =false
+                                    Update: =Image3.Image
+                                    Width: =639
+                                    Y: =9
+                                  Children:
+                                    - DataCardKey2:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 0, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =41
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =19
+                                          Text: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          Wrap: =false
+                                          X: =33
+                                    - Image3:
+                                        Control: Image@2.2.3
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          DisabledBorderColor: =RGBA(255, 255, 255, 1)
+                                          DisabledFill: =RGBA(193, 193, 193, 0.95)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Fill: =RGBA(189, 49, 51, 1)
+                                          Height: =94
+                                          Image: |-
+                                            =Switch(checkstatusvalue,
+                                            0,PenInput2.Image,
+                                            1,UploadedImage1.Image)
+                                          OnSelect: =
+                                          Tooltip: =Parent.DisplayName
+                                          Visible: =false
+                                          Width: =636
+                                          Y: =136
+                                    - ErrorMessage1:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =Image3.Y + Image3.Height
+                                    - StarVisible1:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(189, 49, 51, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =RGBA(189, 49, 51, 1)
+                                          Fill: =RGBA(189, 49, 51, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =33
+                                          PaddingBottom: =DataCardKey2.PaddingBottom
+                                          PaddingLeft: =DataCardKey2.PaddingLeft
+                                          PaddingRight: =DataCardKey2.PaddingRight
+                                          PaddingTop: =DataCardKey2.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey2.Y
+                                    - UploadedImage1:
+                                        Control: Image@2.2.3
+                                        Properties:
+                                          BorderColor: =RGBA(101, 128, 187, 1)
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledFill: =RGBA(193, 193, 193, 0.95)
+                                          Height: =372
+                                          Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                                          ImagePosition: =ImagePosition.Fill
+                                          Width: =579
+                                          X: =AddMediaButton1.X
+                                          Y: =127
+                                    - AddMediaButton1:
+                                        Control: AddMedia@2.2.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Fill: =RGBA(255, 255, 0, 1)
+                                          Height: =359
+                                          Size: =14
+                                          Text: ="Pulsar o hacer clic para agregar evidencia de la imagen"
+                                          Width: =579
+                                          X: =30
+                                          Y: =139
+                                    - PenInput2:
+                                        Control: PenInput@2.3.0
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Fill: =RGBA(255, 255, 255, 1)
+                                          Height: =402
+                                          Visible: =checkstatusvalue=0
+                                          Width: =580
+                                          X: =30
+                                          Y: =569
+                                    - DataCardKey2_1:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 255, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =43
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =20
+                                          Text: ="Pulse o Clic abajo Adjunte imagen de PDF"
+                                          Underline: =true
+                                          Width: =580
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =60
+                                    - Checkbox1_1:
+                                        Control: Classic/CheckBox@2.1.0
+                                        Properties:
+                                          BorderColor: =RGBA(189, 49, 51, 1)
+                                          CheckboxBackgroundFill: =ColorFade(RGBA(255,255,255,1), -5%)
+                                          CheckboxBorderColor: =RGBA(189, 49, 51, 1)
+                                          CheckboxSize: =50
+                                          CheckmarkFill: =RGBA(189, 49, 51, 1)
+                                          Fill: =RGBA(166, 215, 153, 1)
+                                          FocusedBorderColor: =
+                                          Font: =Font.'Open Sans'
+                                          Height: =53
+                                          HoverColor: =RGBA(62,96,170,1)
+                                          OnCheck: |-
+                                            =Set(
+                                                checktext,
+                                                "Recibe a Conformidad"
+                                            );
+                                            Set(
+                                                checkstatusvalue,
+                                                0
+                                            )
+                                          OnUncheck: |-
+                                            =Set(checktext,"Subir Imagen PDF");
+                                            Set(checkstatusvalue,0)
+                                          Size: =14
+                                          Text: =checktext
+                                          Width: =237
+                                          X: =372
+                                          Y: =507
+                                    - DataCardKey2_2:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(166, 215, 153, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =53
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: ="Pulse el cuadro e Ingrese la firma"
+                                          Width: =326
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =507
+                              - Item_DataCard4:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicTextualEdit
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Equipo"
+                                    Default: =ThisItem.Item
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Item)
+                                    Height: =212
+                                    MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Item)
+                                    Required: =true
+                                    Update: =DataCardValue26.Text
+                                    Width: =639
+                                    Y: =5
+                                  Children:
+                                    - DataCardKey29:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =47
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =280
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue26:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Clear: =true
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =Parent.Default
+                                          DelayOutput: =true
+                                          DisabledBorderColor: =RGBA(189, 49, 51, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          EnableSpellCheck: =true
+                                          Font: =Font.'Open Sans'
+                                          Height: =146
+                                          HintText: ="Relacione cada Item sin falta."
+                                          HoverBorderColor: =RGBA(233, 79, 76, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.Yellow
+                                          MaxLength: =Parent.MaxLength
+                                          Mode: =TextMode.MultiLine
+                                          PaddingLeft: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =14
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                                    - ErrorMessage23:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue26.Y + DataCardValue26.Height
+                              - Observaciones_DataCard4:
+                                  Control: TypedDataCard@1.0.6
+                                  Variant: ClassicTextualEdit
+                                  Properties:
+                                    BorderColor: =RGBA(189, 49, 51, 1)
+                                    DataField: ="Observaciones"
+                                    Default: =ThisItem.Observaciones
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Observaciones)
+                                    Height: =201
+                                    MaxLength: =DataSourceInfo([@DespachosAlmacen], DataSourceInfo.MaxLength, Observaciones)
+                                    Required: =false
+                                    Update: =DataCardValue27.Text
+                                    Width: =639
+                                    Y: =6
+                                  Children:
+                                    - DataCardKey30:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Font: =Font.'Open Sans'
+                                          Height: =39
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =Parent.DisplayName
+                                          Width: =298
+                                          Wrap: =false
+                                          X: =310
+                                          Y: =21
+                                    - DataCardValue27:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          BorderColor: =Color.DarkRed
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =
+                                          DelayOutput: =true
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          Height: =123
+                                          HintText: ="Por favor escriba las novedades del envío."
+                                          HoverBorderColor: =RGBA(101, 128, 187, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =Color.Yellow
+                                          MaxLength: =Parent.MaxLength
+                                          Mode: =TextMode.MultiLine
+                                          PaddingLeft: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =15
+                                          Tooltip: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                                    - ErrorMessage24:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(237, 28, 36, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =10
+                                          Live: =Live.Assertive
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.Error
+                                          Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardValue27.Y + DataCardValue27.Height
+                                    - StarVisible24:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(101,128,187,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =DataCardKey30.Height
+                                          PaddingBottom: =DataCardKey30.PaddingBottom
+                                          PaddingLeft: =DataCardKey30.PaddingLeft
+                                          PaddingRight: =DataCardKey30.PaddingRight
+                                          PaddingTop: =DataCardKey30.PaddingTop
+                                          Text: ="*"
+                                          Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                          Width: =30
+                                          Wrap: =false
+                                          Y: =DataCardKey30.Y
+            - Container30:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =88
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =640
+                  Y: =1047
+                Children:
+                  - ButtonCanvas2:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        BasePaletteColor: =RGBA(8, 222, 8, 1)
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =86
+                        OnSelect: "=Set(VarFirma,JSON(Image3.Image,JSONFormat.IncludeBinaryData))&\nSet(VarImagenes,JSON(UploadedImage1.Image,JSONFormat.IncludeBinaryData));\nClearCollect(VarimagenesAdjuntos, DataCardValue1.Attachments);\nSet(EnvioCorreo, \"<!DOCTYPE html>\n<html>\n<body>\n\n\n<h1 style='color:Black;'>ENTREGA/RECEPCIÓN ALMACEN</h1>\n\n<h2 style='color:Tomato;'> DATOS GENERALES </h2>\n\n<p>Fecha: \"&DataCardValue4.SelectedDate&\"</p>\n<p>Ciudad: \"&Text(DataCardValue9.Selected.Value)&\"</p>\n<p>Clase: \"&Text(DataCardValue10.Selected.Value)&\"</p>\n<hr>\n\n<h2 style='color:Tomato;'> ENTREGADO A/RECIBIDO POR: </h2>\n\n<p>Nombre: \"&DataCardValue3.Text&\"</p>\n<p>Cédula: \"&DataCardValue6.Text&\"</p>\n<p>Vehículo: \"&DataCardValue5.Text&\"</p>\n<hr>\n\n<h2 style='color:Tomato;'> ITEMS </h2>\n\n<ul>\n  <li>\"&DataCardValue26.Text&\"</li>\n</ul>  \n<hr>\n\n<h2 style='color:Tomato;'> OBSERVACIONES </h2>\n\n<ul>\n  <li>\"&DataCardValue27.Text&\"</li>\n</ul>  \n<hr>\n\n<h2 style='color:Tomato;'>FIRMA RECIBE A SATISFACCIÓN:</h2>\n\n<img src=\" & VarFirma & \" style= ' width:200px;heigth:200px'>\n<hr>\n\n<h2 style='color:Tomato;'>IMAGEN</h2>\n\n<img src=\" & VarImagenes & \" style= ' width:200px;heigth:200px'>\n<hr>\n\n\n</body>\n</html>\");\nOffice365Outlook.SendEmailV2(User().Email,\"Documento de Almacén Despacho Partequipos\", EnvioCorreo,{Importance:\"High\",Bcc:\"analista.mantenimiento@partequipos.com\",Cc:\"porteria.bg.mq@partequipos.com.co\"});\n\nSubmitForm(Form2)\n "
+                        Text: ="Agregar"
+                        Width: =120
+                        X: =348
+                        Y: =4
+                  - ButtonCanvas1:
+                      Control: Button@0.0.44
+                      Properties:
+                        BasePaletteColor: =RGBA(141, 229, 250, 1)
+                        Height: =86
+                        OnSelect: =NewForm(Form2)
+                        Text: ="Nuevo"
+                        Width: =120
+                        X: =116
+                        Y: =4

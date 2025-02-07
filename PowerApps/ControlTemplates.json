@@ -68,7 +68,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Botón",
-    "Version": "0.0.42"
+    "Version": "0.0.44"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -392,7 +392,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Texto",
-    "Version": "0.0.42"
+    "Version": "0.0.50"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",
