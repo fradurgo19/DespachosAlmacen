@@ -32,8 +32,10 @@
                     LayoutMinHeight: =70
                     LayoutMinWidth: =280
                     OnSelect: |-
-                        =Print();
-                        Navigate(NewExpenseConfirm_1)
+                        =Collect( MyContainer, { Item: Container2_1 } );
+                        SaveData( MyContainer, "MyContainerContentpng" );
+                        //Print();;
+                        Navigate(NewExpenseConfirm_1);
                     Size: =12
                     Text: ="Imprimir desde PC"
                     Tooltip: ="Click para Imprimir"
@@ -190,7 +192,7 @@
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
                     Size: =14
-                    Text: ="Gestión Almacén"
+                    Text: ="Gestión Almacén. Se realiza despacho o recepción y se recibe a satisfacción con la firma."
                     Width: =788
                     Y: =11
                     ZIndex: =2
