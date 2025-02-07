@@ -32,7 +32,7 @@
                     LayoutMinHeight: =70
                     LayoutMinWidth: =280
                     OnSelect: |-
-                        =Print();
+                        =Print(); 
                         Navigate(NewExpenseConfirm_1)
                     Size: =12
                     Text: ="Imprimir desde PC"

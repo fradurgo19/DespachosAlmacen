@@ -75,7 +75,7 @@ Screens:
                               HoverColor: =Self.Color
                               HoverFill: =ColorFade(Self.Fill, 20%)
                               OnSelect: |-
-                                =Print();
+                                =Print(); 
                                 Navigate(NewExpenseConfirm_1)
                               PressedBorderColor: =Self.Fill
                               PressedColor: =Self.Fill
