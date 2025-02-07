@@ -75,10 +75,8 @@ Screens:
                               HoverColor: =Self.Color
                               HoverFill: =ColorFade(Self.Fill, 20%)
                               OnSelect: |-
-                                =Collect( MyContainer, { Item: Container2_1 } );
-                                SaveData( MyContainer, "MyContainerContentpng" );
-                                //Print();;
-                                Navigate(NewExpenseConfirm_1);
+                                =Print();
+                                Navigate(NewExpenseConfirm_1)
                               PressedBorderColor: =Self.Fill
                               PressedColor: =Self.Fill
                               PressedFill: =Self.Color
@@ -218,16 +216,6 @@ Screens:
                         Text: ="Atras"
                         Width: =68
                         X: =23
-                  - Image13:
-                      Control: Image@2.2.3
-                      Properties:
-                        BorderColor: =RGBA(101, 128, 187, 1)
-                        DisabledBorderColor: =RGBA(159, 167, 165, 1)
-                        DisabledFill: =RGBA(193, 193, 193, 0.95)
-                        Height: =69
-                        Image: =Logo
-                        Width: =703
-                        X: =85
             - Container23:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout

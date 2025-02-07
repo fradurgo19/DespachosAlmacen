@@ -32,10 +32,8 @@
                     LayoutMinHeight: =70
                     LayoutMinWidth: =280
                     OnSelect: |-
-                        =Collect( MyContainer, { Item: Container2_1 } );
-                        SaveData( MyContainer, "MyContainerContentpng" );
-                        //Print();;
-                        Navigate(NewExpenseConfirm_1);
+                        =Print();
+                        Navigate(NewExpenseConfirm_1)
                     Size: =12
                     Text: ="Imprimir desde PC"
                     Tooltip: ="Click para Imprimir"
@@ -150,13 +148,6 @@
                 Width: =68
                 X: =23
                 ZIndex: =2
-
-            Image13 As image:
-                Height: =69
-                Image: =Logo
-                Width: =703
-                X: =85
-                ZIndex: =3
 
         Container23 As groupContainer.manualLayoutContainer:
             Height: =1014
