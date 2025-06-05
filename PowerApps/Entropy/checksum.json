@@ -15,7 +15,7 @@
     "Assets\\Images\\e08528e4-a001-4cd8-9d31-b92cb6997128.png": "C8_nxC0vPh0G/LO68e4hBKIWUy5p8/UwfI7XRGT7kLMTlQ=",
     "Assets\\Images\\e6677bbf-aabd-4ca1-a65e-2b6a4445e22d.png": "C8_Cma3NliHfbkRA8zywWsM8cQxp51PrkVvBFQVgQsPlEk=",
     "Controls\\1.json": "C8_5vxDaKJt2V3+e7GaFdztqC1Npu8/NNkfC7zJevbEdcc=",
-    "Controls\\138.json": "C8_HvYJ25+9lJ/2jEQr6FnsN5TgB1nOWFmKdtz9wCnIWis=",
+    "Controls\\138.json": "C8_ObKAG8U4UBJriqmSX/n7jGJg4c9AiLLOctasQRlGxsM=",
     "Controls\\14.json": "C8_y0HcCQgNQrufsbxbwtizInvluEBqBfRNoLfExrNo84Y=",
     "Controls\\189.json": "C8_/faw8GSh1me5iNNEgtbxaRdf3FnXa6Q0XFGuOr/PT6E=",
     "Controls\\197.json": "C8_xUKuyJjG2E4JhsWNulaGc3NlCdgo16+B+4kpLELKgnk=",
@@ -27,7 +27,7 @@
     "Controls\\301.json": "C8_D1wYFatGdN18v5csl4cJ7QiIjONqw8XW+mWJsZQnFFU=",
     "Controls\\4.json": "C8_Kv4aa6MXuHqr8Ur2WTAYcV0wvG6v0Bj465joZ3/klew=",
     "Controls\\87.json": "C8_99ngrLEz5+lwnOgw6tEdVcA/zf8cNlW/uSL89pGnkY0=",
-    "Header.json": "C8_9nFSLc1jJ+tvnACCq/TofBdk/ozUUTHSOTYy6KuWfFQ=",
+    "Header.json": "C8_h6rUD/C3YypysJSJX01XPpAfkyGbXbOynr9ZMw+pW6o=",
     "Properties.json": "C8_4wm0uWTt4yoPi1JDmhPMSEWOzEG3BFdlw5OnoIr/iEo=",
     "References\\DataSources.json": "C8_N0E0hJAm9a339l7xNBwpfixQ1JPtRb8iRTLf4KZ4uJU=",
     "References\\ModernThemes.json": "C8_cA1P95ClkHEne1ybESfUitRepK875nI9LpmjCmpE+4c=",
@@ -43,7 +43,7 @@
     "Src\\Imprimir_2.pa.yaml": "C8_R+CLVLUy99Qshgpf0E6v8A6pnDVyNrRBFb3xtMl9nWI=",
     "Src\\Imprimir_3.pa.yaml": "C8_1Vtir0ZLjDox9+3nXwywkSQX+7K9Upl5MqfAANcF1Ls=",
     "Src\\Inicio.pa.yaml": "C8_LkqWPZFc/ijy4has7H/jtzeMtQACS22brpA3LXNQZlg=",
-    "Src\\My Expenses.pa.yaml": "C8_1scBZKdIDoWzLaVpiv1vLQ96nH9G5GjnTiDLpUQWGXw=",
+    "Src\\My Expenses.pa.yaml": "C8_vPXesakgoq4txGi9edwTUaZWc6wSoRQBacVDy2ZimSw=",
     "Src\\NewExpense_1.pa.yaml": "C8_Mjv5HavH3q3bd5hwiL9Nh7RmoV3Sjtd5xy5FhbjMNeA=",
     "Src\\NewExpenseConfirm.pa.yaml": "C8_ELkYCFv4EzDgQ6JVPowvNPMY3P55Q1WFexu9HUQc+w8=",
     "Src\\NewExpenseConfirm_1.pa.yaml": "C8_sGE6nTdaSIGaPo96G6OPiRJ60EVxihE7qYb8zx5cZSo=",
@@ -51,5 +51,5 @@
     "Src\\NewExpenseConfirm_3.pa.yaml": "C8_vkHvHNb3HpBre0iYp7aNJUAJq8RYy9esEx03uDpyadM=",
     "Src\\SetupScreen.pa.yaml": "C8_r7XlWrvN3Zg70/Fmfh4fK1YpSR6p0P/btN4+70v2EZY="
   },
-  "ClientStampedChecksum": "C8_hKjfM0fRCiEB+gUaqLKVVN+lhtbWlQOBpJCD5WCUOCc="
+  "ClientStampedChecksum": "C8_uYz/QJxUhJVYAI8mFm4f3BvBwx/TUjwmlVgrSlFBoNw="
 }
