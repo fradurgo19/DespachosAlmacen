@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -183,6 +182,7 @@ Screens:
                                     Width: =Parent.TemplateWidth
                         - FormViewer1_1:
                             Control: FormViewer@2.3.4
+                            Layout: Vertical
                             Properties:
                               BorderColor: =RGBA(101, 128, 187, 1)
                               DataSource: =DespachosAlmacen
@@ -190,10 +190,11 @@ Screens:
                               Item: =Gallery1.Selected
                               LayoutMinHeight: =200
                               LayoutMinWidth: =290
+                              NumberOfColumns: =2
                               Width: =650
                             Children:
                               - FechaDocumento_DataCard3:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -202,10 +203,12 @@ Screens:
                                     DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,FechaDocumento)
                                     Required: =true
                                     Width: =397
+                                    X: =0
                                     Y: =0
                                   Children:
                                     - DataCardKey19:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -224,6 +227,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue18:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -241,105 +245,8 @@ Screens:
                                           Width: =Parent.Width - 60
                                           X: =30
                                           Y: =DataCardKey19.Y + DataCardKey19.Height + 5
-                              - Vehículo_DataCard2_1:
-                                  Control: TypedDataCard@1.0.6
-                                  Variant: ClassicTextualView
-                                  Properties:
-                                    BorderColor: =RGBA(101, 128, 187, 1)
-                                    DataField: ="Title"
-                                    Default: =ThisItem.Título
-                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Título)
-                                    Height: =54
-                                    Required: =false
-                                    Width: =397
-                                    X: =1
-                                    Y: =3
-                                  Children:
-                                    - DataCardKey18_1:
-                                        Control: Label@2.5.1
-                                        Properties:
-                                          AutoHeight: =true
-                                          BorderColor: =RGBA(0, 0, 0, 1)
-                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Font: =Font.'Open Sans'
-                                          FontWeight: =FontWeight.Lighter
-                                          Height: =48
-                                          PaddingBottom: =0
-                                          PaddingLeft: =0
-                                          PaddingRight: =0
-                                          PaddingTop: =0
-                                          Size: =12
-                                          Text: =Parent.DisplayName
-                                          Width: =Parent.Width - 60
-                                          Wrap: =false
-                                          X: =30
-                                          Y: =10
-                                    - DataCardValue17_1:
-                                        Control: Label@2.5.1
-                                        Properties:
-                                          AutoHeight: =true
-                                          BorderColor: =RGBA(101, 128, 187, 1)
-                                          Color: =RGBA(47,41,43,1)
-                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          DisplayMode: =Parent.DisplayMode
-                                          Font: =Font.'Open Sans'
-                                          FontWeight: =FontWeight.Bold
-                                          Height: =40
-                                          PaddingLeft: =0
-                                          PaddingRight: =0
-                                          PaddingTop: =0
-                                          Size: =11
-                                          Text: =Parent.Default
-                                          Width: =Parent.Width - 60
-                                          X: =30
-                                          Y: =DataCardKey18_1.Y + DataCardKey18_1.Height + 5
-                              - Firma1_DataCard2_1:
-                                  Control: TypedDataCard@1.0.6
-                                  Variant: ClassicLargeImageView
-                                  Properties:
-                                    BorderColor: =RGBA(101, 128, 187, 1)
-                                    DataField: ="Firma1"
-                                    Default: =ThisItem.Firma1
-                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Firma1)
-                                    Height: =221
-                                    Required: =false
-                                    Width: =397
-                                    X: =1
-                                    Y: =4
-                                  Children:
-                                    - DataCardKey17_1:
-                                        Control: Label@2.5.1
-                                        Properties:
-                                          AutoHeight: =true
-                                          BorderColor: =RGBA(0, 0, 0, 1)
-                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Font: =Font.'Open Sans'
-                                          FontWeight: =FontWeight.Lighter
-                                          Height: =48
-                                          PaddingBottom: =0
-                                          PaddingLeft: =0
-                                          PaddingRight: =0
-                                          PaddingTop: =0
-                                          Size: =12
-                                          Text: =Parent.DisplayName
-                                          Width: =Parent.Width - 60
-                                          Wrap: =false
-                                          X: =30
-                                          Y: =10
-                                    - DataCardValue16_1:
-                                        Control: Image@2.2.3
-                                        Properties:
-                                          BorderColor: =RGBA(101, 128, 187, 1)
-                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
-                                          DisabledFill: =RGBA(193, 193, 193, 0.95)
-                                          DisplayMode: =Parent.DisplayMode
-                                          Height: =131
-                                          Image: =Parent.Default
-                                          Width: =184
-                                          X: =8
-                                          Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
                               - IdDespacho_DataCard1_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -354,6 +261,7 @@ Screens:
                                   Children:
                                     - DataCardKey5_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -373,6 +281,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue2_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -391,7 +300,7 @@ Screens:
                                           X: =30
                                           Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 5
                               - Clase_DataCard1_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicComboBoxView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -402,10 +311,12 @@ Screens:
                                     Required: =false
                                     Update: =DataCardValue13_1.Selected
                                     Width: =397
+                                    X: =0
                                     Y: =1
                                   Children:
                                     - DataCardKey14_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -425,6 +336,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue13_1:
                                         Control: Classic/ComboBox@2.4.0
+                                        MetadataKey: FieldValue
                                         Properties:
                                           BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                           ChevronBackground: =RGBA(62,96,170,1)
@@ -462,6 +374,7 @@ Screens:
                                           Y: =40
                                     - ErrorMessage7_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: ErrorMessage
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -483,6 +396,7 @@ Screens:
                                           Y: =DataCardValue13_1.Y + DataCardValue13_1.Height
                                     - StarVisible4_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldRequired
                                         Properties:
                                           Align: =Align.Center
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -500,7 +414,7 @@ Screens:
                                           Wrap: =false
                                           Y: =DataCardKey14_1.Y
                               - Ciudad_DataCard1_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicComboBoxView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -516,6 +430,7 @@ Screens:
                                   Children:
                                     - DataCardKey9_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -535,6 +450,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue8_1:
                                         Control: Classic/ComboBox@2.4.0
+                                        MetadataKey: FieldValue
                                         Properties:
                                           BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                           ChevronBackground: =RGBA(62,96,170,1)
@@ -572,6 +488,7 @@ Screens:
                                           Y: =37
                                     - ErrorMessage5_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: ErrorMessage
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -593,6 +510,7 @@ Screens:
                                           Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
                                     - StarVisible2_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldRequired
                                         Properties:
                                           Align: =Align.Center
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -610,7 +528,7 @@ Screens:
                                           Wrap: =false
                                           Y: =DataCardKey9_1.Y
                               - Item_DataCard1_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -620,10 +538,12 @@ Screens:
                                     Height: =52
                                     Required: =true
                                     Width: =397
+                                    X: =0
                                     Y: =2
                                   Children:
                                     - DataCardKey15_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -643,6 +563,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue14_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -661,7 +582,7 @@ Screens:
                                           X: =30
                                           Y: =DataCardKey15_1.Y + DataCardKey15_1.Height + 5
                               - PersonaqueRetira_DataCard2_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -676,6 +597,7 @@ Screens:
                                   Children:
                                     - DataCardKey12_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -695,6 +617,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue11_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -713,7 +636,7 @@ Screens:
                                           X: =30
                                           Y: =DataCardKey12_1.Y + DataCardKey12_1.Height + 5
                               - Cédula_DataCard2_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -723,10 +646,12 @@ Screens:
                                     Height: =56
                                     Required: =true
                                     Width: =397
+                                    X: =0
                                     Y: =3
                                   Children:
                                     - DataCardKey13_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -746,6 +671,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue12_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -763,8 +689,62 @@ Screens:
                                           Width: =Parent.Width - 60
                                           X: =30
                                           Y: =DataCardKey13_1.Y + DataCardKey13_1.Height + 5
+                              - Vehículo_DataCard2_1:
+                                  Control: TypedDataCard@1.0.7
+                                  Variant: ClassicTextualView
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Title"
+                                    Default: =ThisItem.Título
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Título)
+                                    Height: =54
+                                    Required: =false
+                                    Width: =397
+                                    X: =1
+                                    Y: =3
+                                  Children:
+                                    - DataCardKey18_1:
+                                        Control: Label@2.5.1
+                                        MetadataKey: FieldName
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Lighter
+                                          Height: =48
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue17_1:
+                                        Control: Label@2.5.1
+                                        MetadataKey: FieldValue
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(101, 128, 187, 1)
+                                          Color: =RGBA(47,41,43,1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =40
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =11
+                                          Text: =Parent.Default
+                                          Width: =Parent.Width - 60
+                                          X: =30
+                                          Y: =DataCardKey18_1.Y + DataCardKey18_1.Height + 5
                               - Observaciones_DataCard1_1:
-                                  Control: TypedDataCard@1.0.6
+                                  Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualView
                                   Properties:
                                     BorderColor: =RGBA(101, 128, 187, 1)
@@ -774,10 +754,12 @@ Screens:
                                     Height: =53
                                     Required: =false
                                     Width: =397
+                                    X: =0
                                     Y: =4
                                   Children:
                                     - DataCardKey16_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldName
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -797,6 +779,7 @@ Screens:
                                           Y: =10
                                     - DataCardValue15_1:
                                         Control: Label@2.5.1
+                                        MetadataKey: FieldValue
                                         Properties:
                                           AutoHeight: =true
                                           BorderColor: =RGBA(101, 128, 187, 1)
@@ -814,3 +797,50 @@ Screens:
                                           Width: =Parent.Width - 60
                                           X: =30
                                           Y: =DataCardKey16_1.Y + DataCardKey16_1.Height + 5
+                              - Firma1_DataCard2_1:
+                                  Control: TypedDataCard@1.0.7
+                                  Variant: ClassicLargeImageView
+                                  Properties:
+                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    DataField: ="Firma1"
+                                    Default: =ThisItem.Firma1
+                                    DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Firma1)
+                                    Height: =221
+                                    Required: =false
+                                    Width: =397
+                                    X: =1
+                                    Y: =4
+                                  Children:
+                                    - DataCardKey17_1:
+                                        Control: Label@2.5.1
+                                        MetadataKey: FieldName
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Lighter
+                                          Height: =48
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =12
+                                          Text: =Parent.DisplayName
+                                          Width: =Parent.Width - 60
+                                          Wrap: =false
+                                          X: =30
+                                          Y: =10
+                                    - DataCardValue16_1:
+                                        Control: Image@2.2.3
+                                        MetadataKey: FieldValue
+                                        Properties:
+                                          BorderColor: =RGBA(101, 128, 187, 1)
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledFill: =RGBA(193, 193, 193, 0.95)
+                                          DisplayMode: =Parent.DisplayMode
+                                          Height: =131
+                                          Image: =Parent.Default
+                                          Width: =184
+                                          X: =8
+                                          Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
