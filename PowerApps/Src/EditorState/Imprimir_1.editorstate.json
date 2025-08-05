@@ -2523,7 +2523,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey14",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2783,7 +2783,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3043,7 +3043,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey16",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3303,7 +3303,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4356,7 +4356,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5165,7 +5165,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5489,7 +5489,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue14",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5751,7 +5751,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5989,7 +5989,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue16",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7012,7 +7012,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8187,7 +8187,7 @@
       "MetaDataIDKey": "",
       "Name": "FormViewer1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8459,7 +8459,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10523,7 +10523,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10769,7 +10769,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
