@@ -361,7 +361,7 @@
                         ZIndex: =1
 
                         DataCardKey4 As label:
-                            Color: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
                             Fill: =RGBA(215, 58, 60, 1)
                             Height: =49
                             PaddingBottom: =0
@@ -369,7 +369,7 @@
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =14
-                            Text: =Parent.DisplayName
+                            Text: ="Fecha"
                             Width: =283
                             Wrap: =false
                             X: =30
@@ -425,7 +425,7 @@
                         ZIndex: =1
 
                         DataCardKey10 As label:
-                            Color: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
                             Fill: =RGBA(215, 58, 60, 1)
                             Height: =47
                             PaddingBottom: =0
@@ -513,7 +513,7 @@
                         ZIndex: =1
 
                         DataCardKey11 As label:
-                            Color: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
                             Fill: =RGBA(215, 58, 60, 1)
                             Height: =46
                             PaddingBottom: =0
@@ -521,7 +521,7 @@
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =14
-                            Text: =Parent.DisplayName
+                            Text: ="Tipo de Envío"
                             Width: =280
                             Wrap: =false
                             X: =30
@@ -596,8 +596,8 @@
                         ZIndex: =1
 
                         DataCardKey3 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 191, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             Height: =50
                             PaddingBottom: =0
                             PaddingLeft: =0
@@ -618,6 +618,7 @@
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Height: =50
+                            HintText: ="Relacione Nombre de quien recibe o entrega"
                             HoverFill: =Color.Gold
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
@@ -679,8 +680,8 @@
                         ZIndex: =1
 
                         DataCardKey7 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 191, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
@@ -700,6 +701,7 @@
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             Height: =50
+                            HintText: ="Relacione CC o NIT"
                             HoverFill: =Color.Gold
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
@@ -746,15 +748,15 @@
                         ZIndex: =1
 
                         DataCardKey6 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 191, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             Height: =35
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =14
-                            Text: =Parent.DisplayName
+                            Text: ="Placa"
                             Width: =298
                             Wrap: =false
                             X: =312
@@ -768,6 +770,7 @@
                             DisabledBorderColor: =RGBA(255, 255, 255, 1)
                             DisplayMode: =Parent.DisplayMode
                             Height: =60
+                            HintText: ="Por favor escriba la placa "
                             HoverBorderColor: =RGBA(189, 49, 51, 1)
                             HoverFill: =Color.Gold
                             MaxLength: =Parent.MaxLength
@@ -834,13 +837,16 @@
 
                         DataCardValue1 As attachments:
                             BorderColor: =Color.DarkRed
+                            Color: =RGBA(255, 255, 255, 1)
                             DisabledBorderColor: =RGBA(189, 49, 51, 1)
                             DisplayMode: =Parent.DisplayMode
                             DropTargetTextColor: =RGBA(189, 49, 51, 1)
-                            Fill: =RGBA(166, 215, 153, 1)
+                            Fill: =RGBA(245, 7, 31, 0.77)
+                            FontWeight: =FontWeight.Bold
                             Height: =174
                             IsInDataCard: =true
                             Items: =Parent.Default
+                            NoAttachmentsText: ="AQUÍ ADJUNTE FOTOGRAFIAS. No hay nada adjunto."
                             PaddingBottom: =5
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             PaddingRight: =5
@@ -853,6 +859,7 @@
                             ZIndex: =2
 
                     Firma1_DataCard1 As typedDataCard.addLargePictureCard:
+                        BorderColor: =RGBA(215, 58, 60, 1)
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Firma1"
                         Default: =ThisItem.Firma1
@@ -870,14 +877,15 @@
 
                         DataCardKey2 As label:
                             Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 0, 1)
                             Height: =41
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =19
-                            Text: =Parent.DisplayName
+                            Text: |-
+                                ="Imagen y Firma:"
                             Width: =Parent.Width - 60
                             Wrap: =false
                             X: =33
@@ -935,12 +943,12 @@
                             ZIndex: =4
 
                         UploadedImage1 As image:
-                            Height: =372
+                            Height: =439
                             Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                             ImagePosition: =ImagePosition.Fill
                             Width: =579
                             X: =AddMediaButton1.X
-                            Y: =127
+                            Y: =60
                             ZIndex: =5
 
                         AddMediaButton1 As addMedia:
@@ -977,6 +985,7 @@
                             Size: =20
                             Text: ="Pulse o Clic abajo Adjunte imagen de PDF"
                             Underline: =true
+                            Visible: =false
                             Width: =580
                             Wrap: =false
                             X: =30
@@ -989,8 +998,9 @@
                             CheckboxSize: =50
                             CheckmarkFill: =RGBA(189, 49, 51, 1)
                             Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(166, 215, 153, 1)
+                            Fill: =RGBA(255, 255, 0, 1)
                             FocusedBorderColor: =
+                            FontWeight: =FontWeight.Bold
                             Height: =53
                             OnCheck: |-
                                 =Set(
@@ -1006,21 +1016,22 @@
                                 Set(checkstatusvalue,0)
                             Size: =14
                             Text: =checktext
-                            Width: =237
-                            X: =372
+                            Width: =253
+                            X: =356
                             Y: =507
                             ZIndex: =10
 
                         DataCardKey2_2 As label:
                             Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(166, 215, 153, 1)
+                            Fill: =RGBA(255, 255, 0, 1)
+                            FontWeight: =FontWeight.Bold
                             Height: =53
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =12
-                            Text: ="Pulse el cuadro e Ingrese la firma"
+                            Text: ="Seleccione el cuadro e Ingrese la firma"
                             Width: =326
                             Wrap: =false
                             X: =30
@@ -1044,8 +1055,8 @@
                         ZIndex: =2
 
                         DataCardKey29 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 191, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             Height: =47
                             PaddingBottom: =0
                             PaddingLeft: =0
@@ -1068,7 +1079,7 @@
                             DisplayMode: =Parent.DisplayMode
                             EnableSpellCheck: =true
                             Height: =146
-                            HintText: ="Relacione cada Item sin falta."
+                            HintText: ="Relacione cada Item sin falta y su estado."
                             HoverBorderColor: =RGBA(233, 79, 76, 1)
                             HoverFill: =Color.Yellow
                             MaxLength: =Parent.MaxLength
@@ -1119,8 +1130,8 @@
                         ZIndex: =2
 
                         DataCardKey30 As label:
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 191, 0, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             Height: =39
                             PaddingBottom: =0
                             PaddingLeft: =0

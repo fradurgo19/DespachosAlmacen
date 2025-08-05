@@ -449,7 +449,7 @@
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =1
                 DelayItemLoading: =true
-                Fill: =RGBA(253, 207, 180, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =661
                 Items: |-
                     =Sort(
@@ -472,6 +472,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =36
                     OnSelect: =Select(Parent)
@@ -491,6 +492,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =34
                     OnSelect: =Select(Parent)
@@ -501,8 +503,8 @@
                     Size: =11
                     Text: =ThisItem.IdDespacho
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =218
-                    X: =329
+                    Width: =189
+                    X: =325
                     Y: =38
                     ZIndex: =2
 
@@ -510,6 +512,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =34
                     OnSelect: =Select(Parent)
@@ -545,6 +548,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =147
                     OnSelect: =Select(Parent)
@@ -555,7 +559,7 @@
                     Size: =10
                     Text: =ThisItem.Item
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =173
+                    Width: =155
                     X: =10
                     Y: =123
                     ZIndex: =6
@@ -564,6 +568,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =37
                     OnSelect: =Select(Parent)
@@ -574,15 +579,16 @@
                     Size: =11
                     Text: =ThisItem.Clase.Value
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =105
-                    X: =194
-                    Y: =139
+                    Width: =112
+                    X: =186
+                    Y: =123
                     ZIndex: =7
 
                 Body1_2 As label:
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
+                    Fill: =RGBA(255, 184, 174, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =39
                     OnSelect: =Select(Parent)
@@ -593,16 +599,16 @@
                     Size: =11
                     Text: =ThisItem.'Creado por'.DisplayName
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =180
-                    X: =334
-                    Y: =139
+                    Width: =189
+                    X: =325
+                    Y: =125
                     ZIndex: =8
 
                 Title2_2 As label:
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -614,7 +620,7 @@
                     Text: |-
                         ="Fecha:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =60
+                    Width: =155
                     X: =10
                     ZIndex: =9
 
@@ -622,7 +628,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -634,7 +640,7 @@
                     Text: |-
                         ="Sede:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =67
+                    Width: =112
                     X: =186
                     ZIndex: =10
 
@@ -642,7 +648,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -652,10 +658,10 @@
                     PaddingTop: =0
                     Size: =12
                     Text: |-
-                        ="Item:"
+                        ="Items:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =50
-                    X: =15
+                    Width: =155
+                    X: =10
                     Y: =79
                     ZIndex: =11
 
@@ -663,7 +669,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -675,8 +681,8 @@
                     Text: |-
                         ="Tipo:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =49
-                    X: =191
+                    Width: =112
+                    X: =186
                     Y: =79
                     ZIndex: =12
 
@@ -684,7 +690,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -696,7 +702,7 @@
                     Text: |-
                         ="Autor:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =58
+                    Width: =189
                     X: =325
                     Y: =82
                     ZIndex: =13
@@ -705,7 +711,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(214, 221, 224, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =31
                     OnSelect: =Select(Parent)
@@ -717,7 +723,7 @@
                     Text: |-
                         ="ID:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =33
+                    Width: =189
                     X: =325
                     ZIndex: =14
 
@@ -726,13 +732,13 @@
                     Image: =Last(ThisItem.'Datos adjuntos').Value
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
-                    Width: =131
-                    X: =194
+                    Width: =112
+                    X: =186
                     Y: =176
                     ZIndex: =15
 
                 Icon6 As icon.Edit:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(0, 0, 0, 1)
                     Height: =39
                     Icon: =Icon.Edit
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Form2)
@@ -742,7 +748,7 @@
                     ZIndex: =16
 
                 Icon7 As icon.ChevronRight:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(0, 0, 0, 1)
                     Height: =50
                     Icon: =Icon.ChevronRight
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_2)
@@ -752,7 +758,7 @@
                     ZIndex: =17
 
                 Icon5 As icon.Print:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(0, 0, 0, 1)
                     Height: =45
                     Icon: =Icon.Print
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_1)
@@ -762,7 +768,7 @@
                     ZIndex: =18
 
                 Icon9 As icon.Mail:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(0, 0, 0, 1)
                     Height: =54
                     Icon: =Icon.Mail
                     OnSelect: =ResetForm(Form2);EditForm(Form2);Navigate(Imprimir_3)
@@ -772,12 +778,12 @@
                     ZIndex: =19
 
                 Image5_1 As image:
-                    Height: =77
+                    Height: =83
                     Image: =ThisItem.Firma1
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
-                    Width: =120
-                    X: =345
-                    Y: =176
+                    Width: =189
+                    X: =325
+                    Y: =170
                     ZIndex: =20
 

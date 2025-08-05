@@ -570,7 +570,7 @@ Screens:
                       Properties:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderThickness: =1
-                        Fill: =RGBA(253, 207, 180, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
                         Height: =661
                         Items: |-
                           =Sort(
@@ -590,6 +590,7 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =36
@@ -609,6 +610,7 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =34
@@ -620,14 +622,15 @@ Screens:
                               Size: =11
                               Text: =ThisItem.IdDespacho
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =218
-                              X: =329
+                              Width: =189
+                              X: =325
                               Y: =38
                         - Body1:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =34
@@ -665,6 +668,7 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =147
@@ -676,7 +680,7 @@ Screens:
                               Size: =10
                               Text: =ThisItem.Item
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =173
+                              Width: =155
                               X: =10
                               Y: =123
                         - Body1_1:
@@ -684,6 +688,7 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =37
@@ -695,14 +700,15 @@ Screens:
                               Size: =11
                               Text: =ThisItem.Clase.Value
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =105
-                              X: =194
-                              Y: =139
+                              Width: =112
+                              X: =186
+                              Y: =123
                         - Body1_2:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
+                              Fill: =RGBA(255, 184, 174, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =39
@@ -714,15 +720,15 @@ Screens:
                               Size: =11
                               Text: =ThisItem.'Creado por'.DisplayName
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =180
-                              X: =334
-                              Y: =139
+                              Width: =189
+                              X: =325
+                              Y: =125
                         - Title2_2:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -734,14 +740,14 @@ Screens:
                               Size: =12
                               Text: ="Fecha:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =60
+                              Width: =155
                               X: =10
                         - Title2_3:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -753,14 +759,14 @@ Screens:
                               Size: =12
                               Text: ="Sede:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =67
+                              Width: =112
                               X: =186
                         - Title2_4:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -770,17 +776,17 @@ Screens:
                               PaddingRight: =0
                               PaddingTop: =0
                               Size: =12
-                              Text: ="Item:"
+                              Text: ="Items:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =50
-                              X: =15
+                              Width: =155
+                              X: =10
                               Y: =79
                         - Title2_5:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -792,15 +798,15 @@ Screens:
                               Size: =12
                               Text: ="Tipo:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =49
-                              X: =191
+                              Width: =112
+                              X: =186
                               Y: =79
                         - Title2_6:
                             Control: Label@2.5.1
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -812,7 +818,7 @@ Screens:
                               Size: =12
                               Text: ="Autor:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =58
+                              Width: =189
                               X: =325
                               Y: =82
                         - Title2_7:
@@ -820,7 +826,7 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 1)
                               DisabledColor: =RGBA(186, 186, 186, 1)
-                              Fill: =RGBA(255, 255, 255, 1)
+                              Fill: =RGBA(214, 221, 224, 1)
                               Font: =Font.'Open Sans'
                               FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                               Height: =31
@@ -832,7 +838,7 @@ Screens:
                               Size: =12
                               Text: ="ID:"
                               VerticalAlign: =VerticalAlign.Top
-                              Width: =33
+                              Width: =189
                               X: =325
                         - Image5:
                             Control: Image@2.2.3
@@ -844,14 +850,14 @@ Screens:
                               Image: =Last(ThisItem.'Datos adjuntos').Value
                               ImagePosition: =ImagePosition.Fill
                               OnSelect: =Select(Parent)
-                              Width: =131
-                              X: =194
+                              Width: =112
+                              X: =186
                               Y: =176
                         - Icon6:
                             Control: Classic/Icon@2.5.0
                             Properties:
                               BorderColor: =RGBA(101, 128, 187, 1)
-                              Color: =RGBA(255, 255, 255, 1)
+                              Color: =RGBA(0, 0, 0, 1)
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledColor: =RGBA(193, 193, 193, 0.95)
                               Height: =39
@@ -864,7 +870,7 @@ Screens:
                             Control: Classic/Icon@2.5.0
                             Properties:
                               BorderColor: =RGBA(101, 128, 187, 1)
-                              Color: =RGBA(255, 255, 255, 1)
+                              Color: =RGBA(0, 0, 0, 1)
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledColor: =RGBA(193, 193, 193, 0.95)
                               Height: =50
@@ -877,7 +883,7 @@ Screens:
                             Control: Classic/Icon@2.5.0
                             Properties:
                               BorderColor: =RGBA(101, 128, 187, 1)
-                              Color: =RGBA(255, 255, 255, 1)
+                              Color: =RGBA(0, 0, 0, 1)
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledColor: =RGBA(193, 193, 193, 0.95)
                               Height: =45
@@ -890,7 +896,7 @@ Screens:
                             Control: Classic/Icon@2.5.0
                             Properties:
                               BorderColor: =RGBA(101, 128, 187, 1)
-                              Color: =RGBA(255, 255, 255, 1)
+                              Color: =RGBA(0, 0, 0, 1)
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledColor: =RGBA(193, 193, 193, 0.95)
                               Height: =54
@@ -905,10 +911,10 @@ Screens:
                               BorderColor: =RGBA(101, 128, 187, 1)
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledFill: =RGBA(193, 193, 193, 0.95)
-                              Height: =77
+                              Height: =83
                               Image: =ThisItem.Firma1
                               ImagePosition: =ImagePosition.Fill
                               OnSelect: =Select(Parent)
-                              Width: =120
-                              X: =345
-                              Y: =176
+                              Width: =189
+                              X: =325
+                              Y: =170

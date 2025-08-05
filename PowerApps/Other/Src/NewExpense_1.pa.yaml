@@ -397,7 +397,7 @@ Screens:
                         Y: =40
                       Children:
                         - Form2:
-                            Control: Form@2.4.3
+                            Control: Form@2.4.4
                             Variant: Classic
                             Layout: Vertical
                             Properties:
@@ -434,6 +434,7 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                                           Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
@@ -443,7 +444,7 @@ Screens:
                                           PaddingRight: =0
                                           PaddingTop: =0
                                           Size: =14
-                                          Text: =Parent.DisplayName
+                                          Text: ="Fecha"
                                           Width: =283
                                           Wrap: =false
                                           X: =30
@@ -514,6 +515,7 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                                           Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
@@ -627,6 +629,7 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                                           Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
@@ -636,7 +639,7 @@ Screens:
                                           PaddingRight: =0
                                           PaddingTop: =0
                                           Size: =14
-                                          Text: =Parent.DisplayName
+                                          Text: ="Tipo de Envío"
                                           Width: =280
                                           Wrap: =false
                                           X: =30
@@ -742,8 +745,9 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =50
                                           PaddingBottom: =0
@@ -770,6 +774,7 @@ Screens:
                                           DisplayMode: =Parent.DisplayMode
                                           Font: =Font.'Open Sans'
                                           Height: =50
+                                          HintText: ="Relacione Nombre de quien recibe o entrega"
                                           HoverBorderColor: =RGBA(101, 128, 187, 1)
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =Color.Gold
@@ -846,8 +851,9 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =40
                                           PaddingBottom: =0
@@ -875,6 +881,7 @@ Screens:
                                           Font: =Font.'Open Sans'
                                           Format: =TextFormat.Number
                                           Height: =50
+                                          HintText: ="Relacione CC o NIT"
                                           HoverBorderColor: =RGBA(101, 128, 187, 1)
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =Color.Gold
@@ -932,8 +939,9 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =47
                                           PaddingBottom: =0
@@ -962,7 +970,7 @@ Screens:
                                           EnableSpellCheck: =true
                                           Font: =Font.'Open Sans'
                                           Height: =146
-                                          HintText: ="Relacione cada Item sin falta."
+                                          HintText: ="Relacione cada Item sin falta y su estado."
                                           HoverBorderColor: =RGBA(233, 79, 76, 1)
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =Color.Yellow
@@ -1021,8 +1029,9 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =39
                                           PaddingBottom: =0
@@ -1127,8 +1136,9 @@ Screens:
                                         MetadataKey: FieldName
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 191, 0, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =35
                                           PaddingBottom: =0
@@ -1136,7 +1146,7 @@ Screens:
                                           PaddingRight: =0
                                           PaddingTop: =0
                                           Size: =14
-                                          Text: =Parent.DisplayName
+                                          Text: ="Placa"
                                           Width: =298
                                           Wrap: =false
                                           X: =312
@@ -1155,6 +1165,7 @@ Screens:
                                           DisplayMode: =Parent.DisplayMode
                                           Font: =Font.'Open Sans'
                                           Height: =60
+                                          HintText: ="Por favor escriba la placa "
                                           HoverBorderColor: =RGBA(189, 49, 51, 1)
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =Color.Gold
@@ -1230,14 +1241,15 @@ Screens:
                                         MetadataKey: FieldValue
                                         Properties:
                                           BorderColor: =Color.DarkRed
-                                          Color: =RGBA(47, 41, 43, 1)
+                                          Color: =RGBA(255, 255, 255, 1)
                                           DisabledBorderColor: =RGBA(189, 49, 51, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                                           DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
                                           DisplayMode: =Parent.DisplayMode
                                           DropTargetTextColor: =RGBA(189, 49, 51, 1)
-                                          Fill: =RGBA(166, 215, 153, 1)
+                                          Fill: =RGBA(245, 7, 31, 0.77)
                                           Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
                                           Height: =174
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
@@ -1246,6 +1258,7 @@ Screens:
                                           ItemHoverColor: =RGBA(47, 41, 43, 1)
                                           ItemHoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
                                           Items: =Parent.Default
+                                          NoAttachmentsText: ="AQUÍ ADJUNTE FOTOGRAFIAS. No hay nada adjunto."
                                           PaddingBottom: =5
                                           PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                           PaddingRight: =5
@@ -1261,7 +1274,7 @@ Screens:
                                   Control: TypedDataCard@1.0.7
                                   Variant: ClassicLargePicture
                                   Properties:
-                                    BorderColor: =RGBA(101, 128, 187, 1)
+                                    BorderColor: =RGBA(215, 58, 60, 1)
                                     DataField: ="Firma1"
                                     Default: =ThisItem.Firma1
                                     DisplayName: =DataSourceInfo([@DespachosAlmacen],DataSourceInfo.DisplayName,Firma1)
@@ -1278,7 +1291,7 @@ Screens:
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(255, 0, 0, 1)
+                                          Fill: =RGBA(255, 255, 0, 1)
                                           Font: =Font.'Open Sans'
                                           Height: =41
                                           PaddingBottom: =0
@@ -1286,7 +1299,7 @@ Screens:
                                           PaddingRight: =0
                                           PaddingTop: =0
                                           Size: =19
-                                          Text: =Parent.DisplayName
+                                          Text: ="Imagen y Firma:"
                                           Width: =Parent.Width - 60
                                           Wrap: =false
                                           X: =33
@@ -1358,12 +1371,12 @@ Screens:
                                           BorderColor: =RGBA(101, 128, 187, 1)
                                           DisabledBorderColor: =RGBA(159, 167, 165, 1)
                                           DisabledFill: =RGBA(193, 193, 193, 0.95)
-                                          Height: =372
+                                          Height: =439
                                           Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                                           ImagePosition: =ImagePosition.Fill
                                           Width: =579
                                           X: =AddMediaButton1.X
-                                          Y: =127
+                                          Y: =60
                                     - AddMediaButton1:
                                         Control: AddMedia@2.2.1
                                         Properties:
@@ -1401,6 +1414,7 @@ Screens:
                                           Size: =20
                                           Text: ="Pulse o Clic abajo Adjunte imagen de PDF"
                                           Underline: =true
+                                          Visible: =false
                                           Width: =580
                                           Wrap: =false
                                           X: =30
@@ -1413,9 +1427,10 @@ Screens:
                                           CheckboxBorderColor: =RGBA(189, 49, 51, 1)
                                           CheckboxSize: =50
                                           CheckmarkFill: =RGBA(189, 49, 51, 1)
-                                          Fill: =RGBA(166, 215, 153, 1)
+                                          Fill: =RGBA(255, 255, 0, 1)
                                           FocusedBorderColor: =
                                           Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
                                           Height: =53
                                           HoverColor: =RGBA(62,96,170,1)
                                           OnCheck: |-
@@ -1432,23 +1447,24 @@ Screens:
                                             Set(checkstatusvalue,0)
                                           Size: =14
                                           Text: =checktext
-                                          Width: =237
-                                          X: =372
+                                          Width: =253
+                                          X: =356
                                           Y: =507
                                     - DataCardKey2_2:
                                         Control: Label@2.5.1
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-                                          Fill: =RGBA(166, 215, 153, 1)
+                                          Fill: =RGBA(255, 255, 0, 1)
                                           Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
                                           Height: =53
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
                                           PaddingTop: =0
                                           Size: =12
-                                          Text: ="Pulse el cuadro e Ingrese la firma"
+                                          Text: ="Seleccione el cuadro e Ingrese la firma"
                                           Width: =326
                                           Wrap: =false
                                           X: =30
