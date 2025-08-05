@@ -277,7 +277,7 @@ Screens:
                               DataSource: =DespachosAlmacen
                               Height: =690
                               Item: =Gallery1.Selected
-                              LayoutMinHeight: =200
+                              LayoutMinHeight: =300
                               LayoutMinWidth: =400
                               NumberOfColumns: =2
                               Width: =FormViewer1.X + Parent.Width
@@ -933,7 +933,7 @@ Screens:
                               BorderColor: =RGBA(101, 128, 187, 1)
                               DelayItemLoading: =true
                               FillPortions: =0
-                              Height: =350
+                              Height: =300
                               Items: =Gallery1.Selected.'Datos adjuntos'
                               LoadingSpinner: =LoadingSpinner.Data
                               ShowNavigation: =true

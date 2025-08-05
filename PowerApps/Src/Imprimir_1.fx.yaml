@@ -194,7 +194,7 @@
                     DataSource: =DespachosAlmacen
                     Height: =690
                     Item: =Gallery1.Selected
-                    LayoutMinHeight: =200
+                    LayoutMinHeight: =300
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
                     Width: =FormViewer1.X + Parent.Width
@@ -714,7 +714,7 @@
                     '#CopilotOverlayLabel': ="Filtrada"
                     DelayItemLoading: =true
                     FillPortions: =0
-                    Height: =350
+                    Height: =300
                     Items: =Gallery1.Selected.'Datos adjuntos'
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
