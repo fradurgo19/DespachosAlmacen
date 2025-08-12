@@ -469,12 +469,14 @@
                 ZIndex: =1
 
                 Title2 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =36
+                    Height: =35
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -489,12 +491,15 @@
                     ZIndex: =1
 
                 Subtitle2 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =1
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =34
+                    Height: =33
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -509,12 +514,14 @@
                     ZIndex: =2
 
                 Body1 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =34
+                    Height: =33
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -545,12 +552,14 @@
                     ZIndex: =5
 
                 Title2_1 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                    Height: =147
+                    Height: =130
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -565,7 +574,9 @@
                     ZIndex: =6
 
                 Body1_1 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
@@ -585,7 +596,9 @@
                     ZIndex: =7
 
                 Body1_2 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =1
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(186, 186, 186, 1)
                     Fill: =RGBA(255, 255, 255, 1)
