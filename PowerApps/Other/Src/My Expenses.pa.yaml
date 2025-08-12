@@ -589,7 +589,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
@@ -611,7 +611,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
@@ -634,7 +634,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
@@ -674,7 +674,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
@@ -696,7 +696,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
@@ -718,7 +718,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Align: =Align.Center
-                              BorderColor: =RGBA(255, 0, 0, 1)
+                              BorderColor: =RGBA(215, 58, 60, 1)
                               BorderThickness: =1
                               DisabledColor: =RGBA(186, 186, 186, 1)
                               Fill: =RGBA(255, 255, 255, 1)
