@@ -452,8 +452,8 @@ Screens:
                               Size: =14
                               TabIndex: =-1
                               Tooltip: ="Despacho o entrega"
-                              Width: =283
-                              X: =18
+                              Width: =288
+                              X: =12
                               Y: =5
                   - Container42:
                       Control: GroupContainer@1.3.0
