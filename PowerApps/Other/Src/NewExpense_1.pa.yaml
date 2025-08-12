@@ -1050,7 +1050,7 @@ Screens:
                                         Properties:
                                           BorderColor: =Color.DarkRed
                                           Color: =RGBA(47, 41, 43, 1)
-                                          Default: =
+                                          Default: =Parent.Default
                                           DelayOutput: =true
                                           DisabledBorderColor: =RGBA(159, 167, 165, 1)
                                           DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)

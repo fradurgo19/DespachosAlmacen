@@ -1147,7 +1147,7 @@
 
                         DataCardValue27 As text:
                             BorderColor: =Color.DarkRed
-                            Default: =
+                            Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Height: =123
