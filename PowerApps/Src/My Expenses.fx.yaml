@@ -755,7 +755,6 @@
                 Image5 As image:
                     Height: =77
                     Image: =Last(FirstN(ThisItem.'Datos adjuntos', 3)).Value
-                    ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
                     Width: =112
                     X: =186
@@ -805,7 +804,6 @@
                 Image5_1 As image:
                     Height: =83
                     Image: =ThisItem.Firma1
-                    ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
                     Width: =189
                     X: =325
