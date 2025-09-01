@@ -458,7 +458,7 @@
                            (Buscar.Text in Item || Buscar.Text in Observaciones || IsBlank(Buscar.Text)) &&
                             (Clase.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) && (Ciudad.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) && (FechaDocumento >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) && (FechaDocumento <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate))
                         ),
-                        Modificado,
+                        Creado,
                         SortOrder.Descending
                     )
                 Layout: =Layout.Vertical
