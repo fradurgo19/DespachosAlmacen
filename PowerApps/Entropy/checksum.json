@@ -1,7 +1,7 @@
 {
   "ClientPerFileChecksums": {
     ".gitignore": "C8_VaC8EcEG56Ufcy1DFyC8Ky19iV9xSsXMDIAcmF2GTj8=",
-    "AppCheckerResult.sarif": "C8_ErTj79HuOS+x1rwkY38jn8iU8ge0SSeCkDOEV0aRYHs=",
+    "AppCheckerResult.sarif": "C8_FR14d5sGQ3lhF5mfJECGLs17wvxQyAA27qE5yeSsmw0=",
     "AppTests\\2.json": "C8_iFYoDzLEyY/eD3CNlvfezs38afN4haUxkV3Lx1JHCQ4=",
     "Assets\\Images\\0001.png": "C8_G38GqAZHTrWWHiiMab58KGAEg0GChMslUwPlw+hvWiE=",
     "Assets\\Images\\0002.gif": "C8_i0KD+2VYvjfXx/toJY1eObim9AcjK2yIyEeBm85l7g0=",
@@ -26,8 +26,8 @@
     "Controls\\299.json": "C8_nI0djFhsS8pq7ul0BhEMVwu0ndVWOHlXp/Vd6PVyO/o=",
     "Controls\\307.json": "C8_oWllTFdWZ24thGHmCa2mLj6XmvAC0JX1J6In/IoYz0I=",
     "Controls\\4.json": "C8_Kv4aa6MXuHqr8Ur2WTAYcV0wvG6v0Bj465joZ3/klew=",
-    "Controls\\65.json": "C8_CwgMHh+1lTS6bIUmLQLSetBZzoQMMTt5FD45VECOaLk=",
-    "Header.json": "C8_x5G6lHUuoVIqgD6jkZ9BVPGLN2D0ZDv+VCJZWxJ+j3s=",
+    "Controls\\65.json": "C8_ZD2//AwKrxwsZR7eItNfinAduy/ca52W8qVx2V3Jf1A=",
+    "Header.json": "C8_XteSBnYEI6CtbbIHGVQG4Tan6UqXa5KZWn7UOfif7pw=",
     "Properties.json": "C8_7Q6JLUo7Ak3cuUBf0USd9YgX8qS3c+tNzgOcUf1nhoY=",
     "References\\DataSources.json": "C8_Px2whw+dyqoEBL5hmkjmENfLBgA5LB8aVexztrUtGbs=",
     "References\\ModernThemes.json": "C8_cA1P95ClkHEne1ybESfUitRepK875nI9LpmjCmpE+4c=",
@@ -43,7 +43,7 @@
     "Src\\Imprimir_2.pa.yaml": "C8_ksyR5+7dIqZYxqRUtfkDy2obaab4yfMYlWvld3s1AAk=",
     "Src\\Imprimir_3.pa.yaml": "C8_1Vtir0ZLjDox9+3nXwywkSQX+7K9Upl5MqfAANcF1Ls=",
     "Src\\Inicio.pa.yaml": "C8_LkqWPZFc/ijy4has7H/jtzeMtQACS22brpA3LXNQZlg=",
-    "Src\\My Expenses.pa.yaml": "C8_R0cpOtNdVyMrDKj7ae/UquolCrOpJiT3vbqC+2CRRfU=",
+    "Src\\My Expenses.pa.yaml": "C8_267OAY4wdF2bFasH+auAMrGWjxa4YjQxSNzdSf5OaKI=",
     "Src\\NewExpense_1.pa.yaml": "C8_F541LqQ7bst/t5leEUL4Q3ce3zZBkfgwfOsNS4+WqFQ=",
     "Src\\NewExpenseConfirm.pa.yaml": "C8_ELkYCFv4EzDgQ6JVPowvNPMY3P55Q1WFexu9HUQc+w8=",
     "Src\\NewExpenseConfirm_1.pa.yaml": "C8_sGE6nTdaSIGaPo96G6OPiRJ60EVxihE7qYb8zx5cZSo=",
@@ -51,5 +51,5 @@
     "Src\\NewExpenseConfirm_3.pa.yaml": "C8_vkHvHNb3HpBre0iYp7aNJUAJq8RYy9esEx03uDpyadM=",
     "Src\\SetupScreen.pa.yaml": "C8_r7XlWrvN3Zg70/Fmfh4fK1YpSR6p0P/btN4+70v2EZY="
   },
-  "ClientStampedChecksum": "C8_Stqc9SmdyKQRa/2fvONOX5ivjIjslMqu7HFnzL9476k="
+  "ClientStampedChecksum": "C8_+JrICS5MpUK0ZeJ+YY+z5ium/eNo1BqqmEUPOHbJ1kc="
 }

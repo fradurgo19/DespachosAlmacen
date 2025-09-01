@@ -180,8 +180,7 @@
 
             FechaInicio As datepicker:
                 BorderColor: =RGBA(189, 49, 51, 1)
-                DefaultDate: |
-                    =DateAdd(Today(), -Day(Today()) + 1)
+                DefaultDate: =DateAdd(Today(), -Day(Today()) - 30)
                 DisabledBorderColor: =RGBA(189, 49, 51, 1)
                 Format: ="dd-mm-yyyy"
                 Height: =50
@@ -210,6 +209,7 @@
 
             FechaFin As datepicker:
                 BorderColor: =RGBA(189, 49, 51, 1)
+                DefaultDate: =DateAdd(Today(), -Day(Today()) + 2)
                 DisabledBorderColor: =RGBA(189, 49, 51, 1)
                 Format: ="dd-mm-yyyy"
                 Height: =50
@@ -451,15 +451,27 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =661
-                Items: |-
-                    =Sort(
-                        Filter(
-                            DespachosAlmacen,
-                           (Buscar.Text in Item || Buscar.Text in Observaciones || IsBlank(Buscar.Text)) &&
-                            (Clase.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) && (Ciudad.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) && (FechaDocumento >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) && (FechaDocumento <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate))
-                        ),
-                        Creado,
-                        SortOrder.Descending
+                Items: |
+                    =With(
+                        {
+                            BaseDatos: Filter(
+                                DespachosAlmacen,
+                                (Clase.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                                (Ciudad.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                                (FechaDocumento >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
+                                (FechaDocumento <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate))
+                            )
+                        },
+                        Sort(
+                            Filter(
+                                BaseDatos,
+                                IsBlank(Buscar.Text) || 
+                                StartsWith(Item, Buscar.Text) || 
+                                StartsWith(Observaciones, Buscar.Text)
+                            ),
+                            FechaDocumento,
+                            SortOrder.Descending
+                        )
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
