@@ -754,7 +754,7 @@
 
                 Image5 As image:
                     Height: =77
-                    Image: =Last(ThisItem.'Datos adjuntos').Value
+                    Image: =Last(FirstN(ThisItem.'Datos adjuntos', 3)).Value
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
                     Width: =112

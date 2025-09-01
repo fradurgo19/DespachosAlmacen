@@ -872,7 +872,7 @@ Screens:
                               DisabledBorderColor: =RGBA(159, 167, 165, 1)
                               DisabledFill: =RGBA(193, 193, 193, 0.95)
                               Height: =77
-                              Image: =Last(ThisItem.'Datos adjuntos').Value
+                              Image: =Last(FirstN(ThisItem.'Datos adjuntos', 3)).Value
                               ImagePosition: =ImagePosition.Fill
                               OnSelect: =Select(Parent)
                               Width: =112
