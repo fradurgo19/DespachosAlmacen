@@ -873,6 +873,7 @@ Screens:
                               DisabledFill: =RGBA(193, 193, 193, 0.95)
                               Height: =77
                               Image: =Last(FirstN(ThisItem.'Datos adjuntos', 3)).Value
+                              ImagePosition: =ImagePosition.Fill
                               OnSelect: =Select(Parent)
                               Width: =112
                               X: =186
@@ -937,6 +938,7 @@ Screens:
                               DisabledFill: =RGBA(193, 193, 193, 0.95)
                               Height: =83
                               Image: =ThisItem.Firma1
+                              ImagePosition: =ImagePosition.Stretch
                               OnSelect: =Select(Parent)
                               Width: =189
                               X: =325
