@@ -209,7 +209,7 @@
 
             FechaFin As datepicker:
                 BorderColor: =RGBA(189, 49, 51, 1)
-                DefaultDate: =DateAdd(Today(), -Day(Today()) + 2)
+                DefaultDate: =DateAdd(Today(), -Day(Today()) + 4)
                 DisabledBorderColor: =RGBA(189, 49, 51, 1)
                 Format: ="dd-mm-yyyy"
                 Height: =50
